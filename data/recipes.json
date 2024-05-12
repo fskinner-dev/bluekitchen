@@ -1,7 +1,7 @@
-[ 
-  { 
-    "name": {"Cole Slaw"},
-    "haiku": {"Serve cold with burgers \nOr barbecue or chicken \nA big pile for lunch \n"},
-    "ingredients": {"1 Head green cabbage diced rustic style \n½ Onion diced small \n2 Carrots, grated thick \nDressing \n1 Cup mayonnaise or vegan mayo \n1 T white vinegar or other flavored vinegars (rice wine vinegars are nice) \n2 T sugar \n2 T water \n½ Teaspoon celery seed \nSalt and coarse pepper or Cajun seasoning such as Tony’s \ndirections \nMix all ingredients and chill. Serve with burgers, barbecue, chicken or just eat a huge plate for your lunch!\n"}
-  }
+[
+    {
+        "name": "Cole Slaw",
+        "haiku": "Serve cold with burgers \nOr barbecue or chicken \nA big pile for lunch \n",
+        "ingredients": "1 Head green cabbage diced rustic style \n½ Onion diced small \n2 Carrots, grated thick \nDressing \n1 Cup mayonnaise or vegan mayo \n1 T white vinegar or other flavored vinegars (rice wine vinegars are nice) \n2 T sugar \n2 T water \n½ Teaspoon celery seed \nSalt and coarse pepper or Cajun seasoning such as Tony’s \ndirections \nMix all ingredients and chill. Serve with burgers, barbecue, chicken or just eat a huge plate for your lunch!\n"
+    }
 ]
