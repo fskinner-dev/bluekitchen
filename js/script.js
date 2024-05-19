@@ -2,12 +2,12 @@ $(function () {
     // Same as document.addEventListener("DOMContentLoaded"...
   
     // Same as document.querySelector("#navbarToggle").addEventListener("blur",...
-    $("#navbarToggle").blur(function (event) {
-      var screenWidth = window.innerWidth;
-      if (screenWidth < 768) {
-        $("#collapsable-nav").collapse("hide");
-      }
-    });
+    // $("#navbarToggle").blur(function (event) {
+    //   var screenWidth = window.innerWidth;
+    //   if (screenWidth < 768) {
+    //     $("#collapsable-nav").collapse("hide");
+    //   }
+    // });
   
     // In Firefox and Safari, the click event doesn't retain the focus
     // on the clicked button. Therefore, the blur event will not fire on
@@ -15,9 +15,9 @@ $(function () {
     // which is set up above will not be called.
     // Refer to issue #28 in the repo.
     // Solution: force focus on the element that the click event fired on
-    $("#navbarToggle").click(function (event) {
-      $(event.target).focus();
-    });
+    // $("#navbarToggle").click(function (event) {
+    //   $(event.target).focus();
+    // });
   });
   
   (function (global) {
@@ -122,6 +122,17 @@ $(function () {
     selectedRecipe = recipe;
     $ajaxUtils.sendGetRequest(allRecipesUrl, buildAndShowRecipeHtml);
   };
+
+  dc.loadTocImage = function(tocShortName){
+    var html = tocShortName+"<img src='images/spices25.jpg'></div>";
+      insertHtml('#display-image', html);
+  };
+
+  dc.hideTocImage = function(tocShortName){
+
+    var html = "";
+      insertHtml('#display-image', html); 
+  };    
 
     // Builds HTML for the categories page based on the data
     // from the server

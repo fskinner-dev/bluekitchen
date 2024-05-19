@@ -1,6 +1,6 @@
 body {
   font-size: 16px;
-  color: #4a657a;
+  color: #1f4a64;
   background-color: #efddb1;
   font-family: 'Oxygen', sans-serif;
 }
@@ -10,28 +10,30 @@ body {
   background-color: #efddb1;
   border-radius: 0;
   border: 0;
+  margin-bottom: -10px;
 }
 
 #logo-img {
-  background: url('../images/bk_logo.jpg') no-repeat;
-  width: 150px;
-  height: 140px;
+  background: url('../images/bk-homepage-logo-cream-cropped.png') no-repeat;
+  width: 200px;
+  height: 200px;
   margin: 10px 15px 10px 0;
-  border-style: inset;
+
 }
 
 .navbar-brand {
-  padding-top: 25px;
+  padding-top: 60px;
 }
 .navbar-brand h1 { /* Cookbook name */
   font-family: 'Lora', serif;
-  color: #7195ad;
+  color: #4d9fd7;
   font-size: 2.5em;
   /* text-transform: uppercase; */
   font-weight: bold;
-  text-shadow: 1px 1px 1px #222;
+  text-shadow: 2px 2px 2px #1f4a65;
   margin-top: 0;
   margin-bottom: 0;
+  margin-left: 20px;;
   line-height: .75;
 }
 .navbar-brand a:hover, .navbar-brand a:focus {
@@ -51,7 +53,7 @@ body {
   margin-top: 10px;
 }
 #nav-list a {
-  color: #497491;
+  color: #4d9fd7;
   text-align: center;
 }
 #nav-list a:hover {
@@ -75,7 +77,7 @@ body {
 }
 
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-  border: 1px solid #121a61;
+  border: 1px solid #1f4a65;
 }
 .navbar-header button.navbar-toggle {
   clear: both;
@@ -88,28 +90,26 @@ body {
   margin-top: 30px;
   padding-top: 35px;
   padding-bottom: 30px;
-  color: #072742;
-  background-color: #4f6370;
+  color: #a3c7e5;
+  background-color: #1f4a65;
   border-top: 0;
 }
 .panel-footer div.row {
   margin-bottom: 35px;
 }
-#hours, #address {
-  line-height: 2;
+.footer-title {
+  text-align: center;
+  font-size: 1.8em;
 }
-#hours > span, #address > span {
-  font-size: 1.3em;
+lop
+.project-section {
+  text-align: center;
 }
-#address p {
-  color: #557c3e;
-  font-size: .8em;
-  line-height: 1.8;
+#projects a{
+  font-size: 1.5em;
+  color: #efddb1;  
 }
-#testimonials {
-  font-style: italic;
-}
-#testimonials p:nth-child(2) {
+#projects p:nth-child(2) {
   margin-top: 25px;
 }
 /* END FOOTER */
@@ -172,17 +172,23 @@ body {
   text-align: center;
   font-size: 1.2em;
   /* text-transform: uppercase; */
-  background-color: #4d679f;
+  background-color: #4d9fd7;
   color: #fff;
   opacity: .8;
 }
-.category-tile:hover {
+.category-tile a:hover {
   box-shadow: 0 1px 5px 1px #cccccc;
 }
 
 #menu-categories-title + div {
   margin-bottom: 50px;
 }
+
+.recipe-list {
+  list-style:none;
+  font-size: 1.2em;
+}
+
 /* END MENU CATEGORIES PAGE */
 
 /* SINGLE CATEGORY PAGE */
@@ -235,7 +241,7 @@ h3.menu-item-title {
 /********** Large devices only **********/
 @media (min-width: 1200px) {
   .container .jumbotron {
-    margin-top: 30px;
+    margin-top: 50px;
     padding: 0;
   }
 }
@@ -244,7 +250,7 @@ h3.menu-item-title {
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Header */
   #logo-img {
-    /* background: url('../images/restaurant-logo_medium.png') no-repeat; */
+    background: url('../images/bk-homepage-logo-cream-mini.png') no-repeat;
     width: 100px;
     height: 100px;
     margin: 5px 5px 5px 0;
@@ -295,21 +301,6 @@ h3.menu-item-title {
     margin-right: 5px;
   }
 
-  #call-btn > a {
-    font-size: 1.5em;
-    display: block;
-    margin: 0 20px;
-    padding: 10px;
-    border: 2px solid #fff;
-    background-color: #f6b319;
-    color: #951c49;
-  }
-  #xs-deliver {
-    margin-top: 5px;
-    font-size: .7em;
-    letter-spacing: .1em;
-    /* text-transform: uppercase; */
-  }
   /* End Header */
 
   /* Footer */
