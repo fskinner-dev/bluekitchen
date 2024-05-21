@@ -5,87 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blue Kitchen, Inc.</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
   </head>
-<body>
-  <header>
-    <nav id="header-nav" class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="index.html" class="pull-left visible-md visible-lg">
-            <div id="logo-img"></div>
-          </a>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Blue Kitchen, Inc.</h1>
+        <h4>a Florida non-profit corporation</h4>
+        <nav>
+          <ul>
+            <li><a href="" class="current">home</a></li>
+            <li><a href="">projects</a></li> 
+            <li><a href="">cookbook</a></li>
+            <li><a href="">about</a></li> 
+            <li><a href="">contact</a></li>
+          </ul>
+        </nav>
+      </header>
 
-          <div class="navbar-brand">
-            <a href="index.html"><h1>Blue Kitchen, Inc.</h1></a>
-          </div>
-
-          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        
-        <div id="collapsable-nav" class="collapse navbar-collapse">
-           <ul id="nav-list" class="nav navbar-nav navbar-right">
-            <li id="navHomeButton" class="visible-xs active">
-              <a href="index.html">
-                <span class="glyphicon glyphicon-home"></span> Home</a>
-            </li>
-            <li id="navMenuButton">
-              <a href="#" onclick="$dc.loadMenuCategories();">
-                <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Cookbook</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="glyphicon glyphicon-search"></span><br class="hidden-xs"> Search</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
-            </li>
-
-          </ul><!-- #nav-list -->
-        </div><!-- .collapse .navbar-collapse -->
-      </div><!-- .container -->
-    </nav><!-- #header-nav -->
-  </header>
-
-  <div id="main-content" class="container"></div>
-
-  <footer class="panel-footer">
-    <div class="container"> 
-      <div class="row">
-        <section id="projects" class="footer-title col-lg-12 col-md-12 col-sm-12">Blue Kitchen Projects</section>
-      </div>
-      <div class="row">
-        <section id="projects" class="col-sm-4 project-section">
-          <a href="#"><span>Pigeon Pea Project</span></a><br>
-          <hr class="visible-xs">
+      <!-- <div id="main-content" class="container"></div> -->
+      <section class="courses">
+        <article>
+          <figure>
+            <img src="images/spices25.jpg" />
+            <figcaption>Appetizers and Sides</figcaption>
+          </figure>
+          <hgroup>
+            <h2>Appetizers and Sides</h2>
+            <h3>Start your meal or round it out with these favorites</h3>
+          </hgroup>
+          <p>Here you will find something to make with what is on-hand</p>
+        </article>
+        <article>
+          <figure>
+            <img src="images/spices25.jpg" />
+            <figcaption>Salads</figcaption>
+          </figure>
+          <hgroup>
+            <h2>Salads</h2>
+            <h3>Fresh favorites</h3>
+          </hgroup>
+          <p>So many things can become a salad</p>
+      </article>
+      </section>
+      <aside>
+        <section class="popular-recipes">
+          <h2>Popular Recipes</h2>
+          <a href="">Butter Chicken</a>
+          <a href="">Shepherd's Pie</a>
+          <a href="">Potato Cheddar Soup</a>
+          <a href="">Island Corn Chowder</a>
         </section>
-        <section id="projects" class="col-sm-4 project-section">
-          <a href="#"><span>Drum For Life</span></a><br>
-          <hr class="visible-xs">
+        <section>
+          <h2>Contact</h2>
+          <p>Blue Kitchen, Inc.<br />
+            bluekitchenmuse@outlook.com</p>        
         </section>
-        <section id="projects" class="col-sm-4 project-section">
-          <a href="#"><span>Blue Kitchen Muse</span></a><br>
-          <hr class="visible-xs">
-        </section>
-      </div>
-      <div class="text-center">&copy; Copyright Blue Kitchen, Inc. 2024</div>
-    </div>
-  </footer>
-
-  <!-- jQuery (Bootstrap JS plugins depend on it) -->
-  <script src="js/jquery-2.1.4.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/ajax-utils.js"></script>
-  <script src="js/script.js"></script>
-</body>
+      </aside>
+      <footer>
+        &copy; 2024 Blue Kitchen, Inc.
+      </footer>
+    </div><!-- .wrapper -->
+    <!-- jQuery (Bootstrap JS plugins depend on it) -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/ajax-utils.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+  </body>
 </html>
