@@ -4,8 +4,7 @@ header, section, footer, aside, nav, article, figure, figcaption {
 }
 body {
   color: #1f4a64;
-  background-color: #efddb1;
-  background-image: url("../images/bluekitchenleft.jpg");
+  background-color: #bdffff;
   background-position: center;
   font-family: Georgia, Times, serif;
   line-height: 1.4em;
@@ -18,8 +17,8 @@ body {
   background-color: #ffffff;
 }
 header {
-  height: 160px;
-  background-image: url("../images/bk-homepage-logo-blue-cropped.png")  ;
+  height: 180px;
+  background-image: url("../images/bk-white-logo.JPG");
   background-repeat:no-repeat;
 }
 header h4 {
@@ -38,6 +37,7 @@ nav, footer {
   color: #ffffff;
   background-color: #aeaca8;
   height: 30px;
+  margin-top: 30px;
 }
 nav ul {
   margin: 0px;
@@ -63,9 +63,9 @@ article {
   overflow: auto;
   width: 100%;
 }
-hgroup {
-  margin-top: 40px;
-}
+/* hgroup {
+
+} */
 figure {
   float: left;
   width: 290px;
@@ -90,11 +90,14 @@ aside section a {
 }
 aside section a:hover {
   color: #985d6a;
-  background-color: #efefef;
+  background-color: #eeeeee;
 }
 a {
-  color: #de6581;
+  color: #1f4a64;
   text-decoration: none;
+}
+a:hover {
+  color: #bdffff;
 }
 h1, h2, h3, h4 {
   font-weight: normal;
@@ -116,4 +119,8 @@ aside h2 {
 footer {
   font-size: 80%;
   padding: 7px 0px 0px 20px;
+}
+footer a {
+  float: right;
+  margin-right: 20px;;
 }
