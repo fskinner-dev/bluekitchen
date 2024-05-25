@@ -11,7 +11,7 @@ body {
   margin: 0px;
 }
 .wrapper {
-  width: 940px;
+  width: 1050px;
   margin: 20px auto 20px auto;
   border: 2px solid #000000;
   background-color: #ffffff;
@@ -53,11 +53,12 @@ nav li a {
 nav li a:hover, nav li a.current {
   color: #000000;
 }
-section.courses {
+section.main-section{
   float: left;
-  width: 659px;
+  width: 340px;
   border-right: 1px solid #eeeeee;
 }
+
 article {
   clear: both;
   overflow: auto;
@@ -79,10 +80,11 @@ figcaption {
   text-align: left;
 }
 aside {
-  width:230px;
+  width: 659px;
   float: left;
   padding: 0px 0px 0px 20px;
 }
+
 aside section a {
   display: block;
   padding: 10px;
@@ -97,7 +99,10 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #bdffff;
+  color: #4297c5;
+}
+.cookbook-nav-links a:hover {
+  color: #4297c5;
 }
 h1, h2, h3, h4 {
   font-weight: normal;
@@ -123,4 +128,49 @@ footer {
 footer a {
   float: right;
   margin-right: 20px;;
+}
+.container {
+  width: 100%;
+}
+
+.columnleft {
+  flex: 0 0 32%;
+  order: -1;
+  padding: 0 1rem;
+  max-width: 32%;
+}
+
+/* cookbook nav style */
+.cb-nav-links ul {
+  list-style-type: none;
+
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+}
+
+.active {  
+  display: block;
 }
