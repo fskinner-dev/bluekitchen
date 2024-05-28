@@ -74,10 +74,16 @@
       var element = document.getElementById(id);
       // this adds or removes the class on this element
       element.classList.toggle("active");
+
       // likewise this adds or removes this class on this element 
       // element.parentElement.classList.toggle("caret-down");
       element.parentElement.querySelector(".caret").classList.toggle("caret-down");
-   }
+      element.parentElement.querySelector(".title").classList.toggle("title-underline");     
+    }
+
+    mc.addTitlePhoto = function(id) {
+      
+    }
 
     // called from home page menu when cookbook is clicked
     mc.loadCookbookNav = function () {
@@ -139,50 +145,50 @@
   //---------------------------//
 
   // Build HTML for cookbook nav
-    function buildAndShowCookbookNavHTML(cbNavData) {
-      // console.log(cbNavData);
+    // function buildAndShowCookbookNavHTML(cbNavData) {
+    //   // console.log(cbNavData);
 
-      $ajaxUtils.sendGetRequest(
-        cbNavHtml,
-        function(cbNavHtml){
-          // Switch CSS class active to menu button
-          switchMenuToActive();
-          var cbNavViewHtml = buildCookbookNavViewHtml(
-            cbNavData,
-            cbNavHtml
-          );
-          insertHtml("#main-content", cbNavHtml);
-        },
-        false
-      );
-    }
+    //   $ajaxUtils.sendGetRequest(
+    //     cbNavHtml,
+    //     function(cbNavHtml){
+    //       // Switch CSS class active to menu button
+    //       switchMenuToActive();
+    //       var cbNavViewHtml = buildCookbookNavViewHtml(
+    //         cbNavData,
+    //         cbNavHtml
+    //       );
+    //       insertHtml("#main-content", cbNavHtml);
+    //     },
+    //     false
+    //   );
+    // }
   
-    function buildCookbookNavViewHtml(cbNavData, cbNavHtml) {
-      var finalHtml = cbNavHtml;
-      finalHtml += "<section>";
+    // function buildCookbookNavViewHtml(cbNavData, cbNavHtml) {
+    //   var finalHtml = cbNavHtml;
+    //   finalHtml += "<section>";
 
-      var htmlString = "";
+    //   var htmlString = "";
   
-      // Loop over cbNavdata
-      for (var i = 0; i < cbNavData.length; i++) {
-        var buildPage = cbNavHtml;
-        buildPage = insertProperty(buildPage, "name", cbNavData[i].name);
-        var recipes = cbNavData[i].recipes;
-        var addRecipe = buildPage;
-        for (var j = 0; j < recipes.length; j++) {
+    //   // Loop over cbNavdata
+    //   for (var i = 0; i < cbNavData.length; i++) {
+    //     var buildPage = cbNavHtml;
+    //     buildPage = insertProperty(buildPage, "name", cbNavData[i].name);
+    //     var recipes = cbNavData[i].recipes;
+    //     var addRecipe = buildPage;
+    //     for (var j = 0; j < recipes.length; j++) {
 
-          addRecipe = insertProperty(addRecipe, "recipe", recipes[j].recipe);
-          htmlString += addRecipe;
-          // Add clearfix after every second recipe item
-          // if (i % 2 != 0) {
-          //   htmlString3 +=
-          //     "<div class='clearfix visible-lg-block visible-md-block'></div>";
-          // }
-        }
-      }
-      finalHtml += htmlName + htmlString + "</section>";
-      return finalHtml;
-    }
+    //       addRecipe = insertProperty(addRecipe, "recipe", recipes[j].recipe);
+    //       htmlString += addRecipe;
+    //       // Add clearfix after every second recipe item
+    //       // if (i % 2 != 0) {
+    //       //   htmlString3 +=
+    //       //     "<div class='clearfix visible-lg-block visible-md-block'></div>";
+    //       // }
+    //     }
+    //   }
+    //   finalHtml += htmlName + htmlString + "</section>";
+    //   return finalHtml;
+    // }
   
     // Builds HTML for the single category page based on the data
     // from the server
