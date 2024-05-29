@@ -4,17 +4,11 @@
   
   (function (global) {
     var mc = {};     // mc prefix for menu called functions
-    var data = {};   // might not need this anymore
-    var recipeData = {};  // cache recipe data for other recipes.  May need a flag so we don't keep loading this 
-    var selectedRecipe = null; // this is the recipe the user selected... until we refactor  
-  
+    var cbNavData = {};   // local cache of data from cb-nav.json
+    
     var bkHomeHtml = "views/bk-home.html";
     var cbNavHtml = "views/cb-nav.html";
-    var recipeListTitleHtml = "views/recipe-list-title.html";
-    var recipeListHtml = "views/recipe-list.html";
-    var recipeTitleHtml = "views/recipe-title.html";
-    var recipeDetailHtml = "views/recipe-detail.html";
-    var allRecipesUrl = "https://fskinner-dev.github.io/bluekitchen/data/recipes.json";
+    var cbNavJsonPath = "data/cb-nav.json";
     
     //-------------------//
     // UTILITY FUNCTIONS //
@@ -82,7 +76,18 @@
     }
 
     mc.addTitlePhoto = function(id) {
-      
+      console.log('addTitlePhoto called');
+      var element = document.getElementById(id);
+      insertHtml("#aside-content", "<img src='images/menu/A.jpg'></img>");
+    }
+
+    mc.addRecipePhoto = function(id) {
+      var element = document.getElementById(id);
+      insertHtml("#aside-content", "<img src='images/menu/A0.png'></img>");
+    }
+
+    mc.clearAside = function() {
+      insertHtml("#aside-content", "");
     }
 
     // called from home page menu when cookbook is clicked
