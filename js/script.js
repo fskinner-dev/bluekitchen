@@ -83,7 +83,10 @@
 
     mc.addRecipePhoto = function(id) {
       var element = document.getElementById(id);
-      insertHtml("#aside-content", "<img src='images/menu/A0.png'></img>");
+      var photo = "";
+      photo = id+'.png';
+      console.log("photo is " + photo);
+      insertHtml("#aside-content", "<img src='images/menu/{{photo}}'></img>");
     }
 
     mc.clearAside = function() {

@@ -3,7 +3,6 @@
         "id" : 1,
         "name": "Appetizers and Sides",
         "short_name": "A",
-        "photo": "../images/A.jpg",
         "recipes":[
             {"recipe":"Bean Salsa"},
             {"recipe":"Broccoli Bread"},
