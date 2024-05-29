@@ -5,12 +5,12 @@
         "short_name": "A",
         "photo": "../images/A.jpg",
         "recipes":[
-            {"recipe":"Bean Salsa", "photo":"../images/A0.png"},
-            {"recipe":"Broccoli Bread", "photo":"../images/A1.png"},
-            {"recipe":"Campground Mac and Cheese", "photo":"../images/A2.png"},
-            {"recipe":"Lil’ Jimmy Harper’s Gag-a-Maggot", "photo":"../images/A3.png"},
-            {"recipe":"Mating Call Roasted Veggies", "photo":"../images/A4.png"},
-            {"recipe":"Refrigerator Rolls", "photo":"../images/A5.png"}
+            {"recipe":"Bean Salsa"},
+            {"recipe":"Broccoli Bread"},
+            {"recipe":"Campground Mac and Cheese"},
+            {"recipe":"Lil’ Jimmy Harper’s Gag-a-Maggot"},
+            {"recipe":"Mating Call Roasted Veggies"},
+            {"recipe":"Refrigerator Rolls"}
         ]
     },
     {
