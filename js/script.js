@@ -86,7 +86,7 @@
       var photo = "";
       photo = id+'.png';
       console.log("photo is " + photo);
-      insertHtml("#aside-content", "<img src='images/menu/{{photo}}'></img>");
+      insertHtml("#aside-content", "<img src=images/menu/"+ photo +"></img>");
     }
 
     mc.clearAside = function() {

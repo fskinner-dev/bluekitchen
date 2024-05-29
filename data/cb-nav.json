@@ -61,13 +61,14 @@
         "name": "Main Dishes",
         "short_name": "K",
         "recipes":[
+            {"recipe":"Anything Curry"},
             {"recipe":"Butter Chicken"},
-            {"recipe":"Curry Anything"},
             {"recipe":"Florida Hot Chicken"},
             {"recipe":"Fried Fish Tacos"},
             {"recipe":"Garlic-Seared Tofu"},
             {"recipe":"No Bourbon Chicken"},
-            {"recipe":"Quiche "},
+            {"recipe":"Quiche"},
+            {"recipe":"Red Beans"},
             {"recipe":"Red Beans and Rice"},
             {"recipe":"Shepherd’s Pie"}
         ]
