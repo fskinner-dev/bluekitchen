@@ -7,6 +7,7 @@
     var cbNavData = {};   // local cache of data from cb-nav.json
     
     var bkHomeHtml = "views/bk-home.html";
+    var bkHomeAsideHtml = "views/bk-home-aside.html";
     var cbNavHtml = "views/cb-nav.html";
     var cbNavJsonPath = "data/cb-nav.json";
     
@@ -62,6 +63,14 @@
         },
         false
       );
+      
+      $ajaxUtils.sendGetRequest(
+        bkHomeAsideHtml,
+        function (responseText) {
+          document.querySelector("#aside-content").innerHTML = responseText;
+        },
+        false
+      );      
     });
 
     mc.toggleClass = function(id) {
@@ -105,6 +114,7 @@
         },
         false
       );
+      mc.clearAside();
     };
   
   //   // 'categoryShort' is a short_name for a category
