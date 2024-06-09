@@ -4,12 +4,9 @@
   
   (function (global) {
     var mc = {};     // mc prefix for menu called functions
-    var cbNavData = {};   // local cache of data from cb-nav.json
     
-    var bkHomeHtml = "views/bk-home.html";
-    var bkHomeAsideHtml = "views/bk-home-aside.html";
-    var cbNavHtml = "views/cb-nav.html";
-    var cbNavJsonPath = "data/cb-nav.json";
+    var p3MainHtml = "views/p3-main.html";
+    var p3AsideHtml = "views/p3-aside.html";
     
     //-------------------//
     // UTILITY FUNCTIONS //
@@ -57,7 +54,7 @@
     document.addEventListener("DOMContentLoaded", function (event) {
       showLoading("#main-content");
       $ajaxUtils.sendGetRequest(
-        bkHomeHtml,
+        p3MainHtml,
         function (responseText) {
           document.querySelector("#main-content").innerHTML = responseText;
         },
@@ -65,7 +62,7 @@
       );
       
       $ajaxUtils.sendGetRequest(
-        bkHomeAsideHtml,
+        p3AsideHtml,
         function (responseText) {
           document.querySelector("#aside-content").innerHTML = responseText;
         },

@@ -4,86 +4,45 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blue Kitchen Cookbook</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Blue Kitchen, Inc.</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
   </head>
-<body>
-  <header>
-    <nav id="header-nav" class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="index.html" class="pull-left visible-md visible-lg">
-            <div id="logo-img"></div>
-          </a>
+  <body>
+    <div class="wrapper">
+      <header>
+        <hgroup>
+          <h1>Blue Kitchen, Inc.</h1>
+          <h4>a Florida non-profit corporation</h4>
+        </hgroup>
+        <nav>
+          <ul>
+            <li><a href="" id="home" class="current">home</a></li>
+            <li><a href="p3-home.html" id="p3">pigeon pea project</a></li> 
+            <li><a href="drumforlife.html" id="dfl">drum for life</a></li>             
+            <li><a href="#" id="cookbook" onclick="$mc.loadCookbookNav();">blue kitchen cookbook</a></li>
+            <li><a href="#" id="about">about</a></li> 
+          </ul>
+        </nav>
+      </header>
 
-          <div class="navbar-brand">
-            <a href="index.html"><h1>Blue Kitchen Cookbook</h1></a>
-          </div>
-
-          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        
-        <div id="collapsable-nav" class="collapse navbar-collapse">
-           <ul id="nav-list" class="nav navbar-nav navbar-right">
-            <li id="navHomeButton" class="visible-xs active">
-              <a href="index.html">
-                <span class="glyphicon glyphicon-home"></span> Home</a>
-            </li>
-            <li id="navMenuButton">
-              <a href="#" onclick="$dc.loadMenuCategories();">
-                <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Recipes</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="glyphicon glyphicon-search"></span><br class="hidden-xs"> Search</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
-            </li>
-
-          </ul><!-- #nav-list -->
-        </div><!-- .collapse .navbar-collapse -->
-      </div><!-- .container -->
-    </nav><!-- #header-nav -->
-  </header>
-
-  <div id="main-content" class="container"></div>
-
-  <footer class="panel-footer">
-    <div class="container">
-      <div class="row">
-        <section id="hours" class="col-sm-4">
-          <span>Info 1</span><br>
-          This is some info<br>
-          <hr class="visible-xs">
+      <section class="main-section">
+        <div id="main-content"></div>
+      </section>        
+      <aside>
+        <section class="aside-section">
+          <div id="aside-content"></div>
         </section>
-        <section id="address" class="col-sm-4">
-          <span>Info 2</span><br>
-          This is some info<br>
-          <hr class="visible-xs">
-        </section>
-        <section id="testimonials" class="col-sm-4">
-          <p>"any testimonials about our cookbook!"</p>
-        </section>
-      </div>
-      <div class="text-center">&copy; Copyright Blue Kitchen, Inc. 2024</div>
-    </div>
-  </footer>
+      </aside>
 
-  <!-- jQuery (Bootstrap JS plugins depend on it) -->
-  <script src="js/jquery-2.1.4.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/ajax-utils.js"></script>
-  <script src="js/script.js"></script>
-</body>
+      <footer>
+          &copy; 2024 Blue Kitchen, Inc.
+          <a href="mailto:bluekitchenmuse@icloud.com">email: bluekitchenmuse@icloud.com</a>
+      </footer>
+    </div><!-- .wrapper -->
+
+    <!-- jQuery (Bootstrap JS plugins depend on it) -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/ajax-utils.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>

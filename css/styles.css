@@ -1,376 +1,191 @@
+/** Blue Kitchen, Inc. CSS style sheet */
+header, section, footer, aside, nav, article, figure, figcaption {
+  display: block;
+}
 body {
-  font-size: 16px;
-  color: #4a657a;
-  background-color: #efddb1;
-  font-family: 'Oxygen', sans-serif;
+  color: #1f4a64;
+  background-color: #e2d3b2;
+  background-position: center;
+  font-family: Georgia, Times, serif;
+  line-height: 1.4em;
+  margin: 0px;
+}
+.wrapper {
+  width: 1050px;
+  margin: 20px auto 20px auto;
+  border: 2px solid #000000;
+  background-color: #ffffff;
+}
+header {
+  height: 180px;
+  background-image: url("../images/bk-white-logo.JPG");
+  background-repeat:no-repeat;
+}
+.kitchen-pic {
+  height: 180px;
+  background-image: url("../images/bluekitchencropped.jpg");
+  background-repeat:no-repeat;
+  margin-left: 10px; 
+}
+header h4 {
+  margin-left: 200px;
+}
+h1 {
+  text-indent: 0px;
+  width: 740px;
+  height: 40px;
+  margin: 0px;
+  padding-left:150px;
+  padding-top: 50px;
+}
+nav, footer {
+  clear: both;
+  color: #ffffff;
+  background-color: #aeaca8;
+  height: 30px;
+  margin-top: 30px;
+}
+nav ul {
+  margin: 0px;
+  padding: 5px 0px 5px 30px;
+}
+nav li {
+  display: inline;
+  margin-right: 40px;
+  font-size:larger;
+}
+nav li a {
+  color: #ffffff;
+}
+nav li a:hover, nav li a.current {
+  color: #000000;
+}
+section.main-section{
+  float: left;
+  width: 340px;
+  border-right: 1px solid #eeeeee;
 }
 
-/** HEADER **/
-#header-nav {
-  background-color: #efddb1;
-  border-radius: 0;
-  border: 0;
+article {
+  clear: both;
+  overflow: auto;
+  width: 100%;
+}
+/* hgroup {
+
+} */
+figure {
+  float: left;
+  width: 290px;
+  height: 220px;
+  padding: 5px;
+  margin: 20px;
+  border: 1px solid #eeeeee;
+}
+figcaption {
+  font-size: 90%;
+  text-align: left;
+}
+aside {
+  width: 659px;
+  float: left;
+  padding: 0px 0px 0px 20px;
+  margin-top: 20px;
 }
 
-#logo-img {
-  background: url('../images/bk_logo.jpg') no-repeat;
-  width: 150px;
-  height: 140px;
-  margin: 10px 15px 10px 0;
-  border-style: inset;
+aside section a {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #eeeeee;
 }
-
-.navbar-brand {
-  padding-top: 25px;
+aside section a:hover {
+  color: #985d6a;
+  background-color: #eeeeee;
 }
-.navbar-brand h1 { /* Cookbook name */
-  font-family: 'Lora', serif;
-  color: #7195ad;
-  font-size: 2.5em;
-  /* text-transform: uppercase; */
-  font-weight: bold;
-  text-shadow: 1px 1px 1px #222;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: .75;
-}
-.navbar-brand a:hover, .navbar-brand a:focus {
+a {
+  color: #1f4a64;
   text-decoration: none;
 }
-.navbar-brand p { /* Kosher cert */
-  /* color: #000; */
-  /* text-transform: uppercase; */
-  font-size: .7em;
-  margin-top: 15px;
-}
-.navbar-brand p span { /* Star-K */
-  vertical-align: middle;
+a:hover {
+  color: #4297c5;
 }
 
-#nav-list {
-  margin-top: 10px;
+h1, h2, h3, h4 {
+  font-weight: normal;
 }
-#nav-list a {
-  color: #497491;
-  text-align: center;
+h2 {
+  margin: 10px 0px 5px 0px;
+  padding: 0px;
 }
-#nav-list a:hover {
-  background: #E7E7E7;
+h3 {
+  margin: 0px 0px 10px 0px;
+  color: #de6581;
 }
-#nav-list a span {
-  font-size: 1.8em;
+h4 {
+  margin: 0px 0px 10px 0px;
 }
-
-#phone {
-  margin-top: 5px;
+aside h2 {
+  padding: 30px 0px 10px 0px;
 }
-#phone a { /* Phone number */
-  text-align: right;
-  padding-bottom: 0;
+footer {
+  font-size: 80%;
+  padding: 7px 0px 0px 20px;
 }
-#phone div { /* We Deliver */
-  color: #557c3e;
-  text-align: right;
-  padding-right: 15px;
+footer a {
+  float: right;
+  margin-right: 20px;;
 }
-
-.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-  border: 1px solid #121a61;
-}
-.navbar-header button.navbar-toggle {
-  clear: both;
-  margin-top: -30px;
-}
-/* END HEADER */
-
-/* FOOTER */
-.panel-footer {
-  margin-top: 30px;
-  padding-top: 35px;
-  padding-bottom: 30px;
-  color: #072742;
-  background-color: #4f6370;
-  border-top: 0;
-}
-.panel-footer div.row {
-  margin-bottom: 35px;
-}
-#hours, #address {
-  line-height: 2;
-}
-#hours > span, #address > span {
-  font-size: 1.3em;
-}
-#address p {
-  color: #557c3e;
-  font-size: .8em;
-  line-height: 1.8;
-}
-#testimonials {
-  font-style: italic;
-}
-#testimonials p:nth-child(2) {
-  margin-top: 25px;
-}
-/* END FOOTER */
-
-
-
-/* HOME PAGE */
-.container .jumbotron {
-  box-shadow: 0 0 50px #a7d2ea;
-  border: 2px solid #0c283f;
-}
-
-#menu-tile, #specials-tile, #map-tile {
-  height: 250px;
+.container {
   width: 100%;
-  margin-bottom: 15px;
-  position: relative;
-  border: 2px solid #0c283f;
-  overflow: hidden;
-}
-#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
-  box-shadow: 0 1px 5px 1px #cccccc;
-}
-#menu-tile {
-  background: url('../images/spices.jpg') no-repeat;
-  background-position: center;
-}
-#specials-tile {
-  background: url('../images/spices.jpg') no-repeat;
-  background-position: center;
-}
-#menu-tile span, #specials-tile span, #map-tile span {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 1.6em;
-  /* text-transform: uppercase; */
-  background-color: #000;
-  color: #fff;
-  opacity: .8;
-}
-/* END HOME PAGE */
-
-/* MENU CATEGORIES PAGE */
-.category-tile { 
-  position: relative;
-  border: 2px solid #0c283f;
-  overflow: hidden;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 15px;
-}
-.category-tile span {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 1.2em;
-  /* text-transform: uppercase; */
-  background-color: #4d679f;
-  color: #fff;
-  opacity: .8;
-}
-.category-tile:hover {
-  box-shadow: 0 1px 5px 1px #cccccc;
 }
 
-#menu-categories-title + div {
-  margin-bottom: 50px;
-}
-/* END MENU CATEGORIES PAGE */
-
-/* SINGLE CATEGORY PAGE */
-.menu-item-tile {
-  margin-bottom: 25px;
-}
-.menu-item-tile hr {
-  width: 80%;
-}
-.menu-item-tile .menu-item-price {
-  font-size: 1.1em;
-  text-align: right;
-  margin-top: -15px;
-  margin-right: -15px;
-}
-.menu-item-tile .menu-item-price span {
-  font-size: .6em;
-}
-.menu-item-photo {
-  position: relative;
-  border: 2px solid #0c283f; 
-  overflow: hidden;
-  padding: 0;
-  margin-right: -15px;
-  margin-left: auto;
-  margin-bottom: 20px;
-  max-width: 250px;
-}
-.menu-item-photo div {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 80px;
-  background-color: #557c3e;
-  text-align: center;
-}
-.menu-item-description {
-  padding-right: 30px;
-}
-h3.menu-item-title {
-  margin: 0 0 10px;
-}
-.menu-item-details {
-  font-size: .9em;
-  font-style: italic;
-}
-/* END SINGLE CATEGORY PAGE */
-
-
-/********** Large devices only **********/
-@media (min-width: 1200px) {
-  .container .jumbotron {
-    margin-top: 30px;
-    padding: 0;
-  }
+.columnleft {
+  flex: 0 0 32%;
+  order: -1;
+  padding: 0 1rem;
+  max-width: 32%;
 }
 
-/********** Medium devices only **********/
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* Header */
-  #logo-img {
-    /* background: url('../images/restaurant-logo_medium.png') no-repeat; */
-    width: 100px;
-    height: 100px;
-    margin: 5px 5px 5px 0;
-  }
-  /* End Header */
-
-  /* Home Page */
-  .container .jumbotron {
-    margin-top: 30px;
-    padding: 0;
-  }
-  /* End Home Page */
+/* cookbook nav style */
+.cb-nav-links ul {
+  list-style-type: none;
 }
 
-/********** Small devices only **********/
-@media (min-width: 768px) and (max-width: 991px) {
-  /* Home Page */
-  .container .jumbotron {
-    margin-top: 30px;
-    padding: 0;
-  }
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
 }
 
-/********** Extra small devices only **********/
-@media (max-width: 767px) {
-  /* Header */
-  .navbar-brand {
-    padding-top: 10px;
-    height: 80px;
-  }
-  .navbar-brand h1 { /* Restaurant name */
-    padding-top: 10px;
-    font-size: 5vw; /* 1vw = 1% of viewport width */
-  }
-  .navbar-brand p { /* Kosher cert */
-    font-size: .6em;
-    margin-top: 12px;
-  }
-  .navbar-brand p img { /* Star-K */
-    height: 20px;
-  }
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
 
-  #collapsable-nav a { /* Collapsed nav menu text */
-    font-size: 1.2em;
-  }
-  #collapsable-nav a span { /* Collapsed nav menu glyph */
-    font-size: 1em;
-    margin-right: 5px;
-  }
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);  
+}
+.title-underline {
+  text-decoration: underline;
+}
 
-  #call-btn > a {
-    font-size: 1.5em;
-    display: block;
-    margin: 0 20px;
-    padding: 10px;
-    border: 2px solid #fff;
-    background-color: #f6b319;
-    color: #951c49;
-  }
-  #xs-deliver {
-    margin-top: 5px;
-    font-size: .7em;
-    letter-spacing: .1em;
-    /* text-transform: uppercase; */
-  }
-  /* End Header */
+.nested {
+  display: none;
+}
 
-  /* Footer */
-  .panel-footer section {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  .panel-footer section:nth-child(3) {
-    margin-bottom: 0; /* margin already exists on the whole row */
-  }
-  .panel-footer section hr {
-    width: 50%;
-  }
-  /* End Footer */
-
-  /* Home Page */
-  .container .jumbotron {
-    margin-top: 30px;
-    padding: 0;
-  }
-  #menu-tile, #specials-tile {
-    width: 360px;
-    margin: 0 auto 15px;
-  }
-
-  .menu-item-photo {
-    margin-right: auto;
-  }
-  .menu-item-tile .menu-item-price {
-    text-align: center;
-  }
-  .menu-item-description {
-    text-align: center;;
-  }
+.active {  
+  display: block;
 }
 
 
-/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
-@media (max-width: 479px) {
-  /* Header */
-  .navbar-brand h1 { /* Restaurant name */
-    padding-top: 5px;
-    font-size: 6vw;
-  }
-  /* End Header */
-  
-  /* Home page */
-  #menu-tile, #specials-tile {
-    width: 280px;
-    margin: 0 auto 15px;
-  }
+/* cookbook css */
 
-  .col-xxs-12 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    float: left;
-    width: 100%;
-  }
+.cookbook-nav-links a:hover {
+  color: #4297c5;
 }
-
-
-
