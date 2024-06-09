@@ -1,0 +1,142 @@
+/** Blue Kitchen, Inc. CSS style sheet */
+  header, section, footer, aside, nav, article, figure, figcaption {
+    display: block;
+  }
+  body {
+    color: #1f4a64;
+    background-color: #e2d3b2;
+    background-position: center;
+    font-family: Georgia, Times, serif;
+    line-height: 1.4em;
+    margin: 0px;
+  }
+  .wrapper {
+    width: 1050px;
+    margin: 20px auto 20px auto;
+    border: 2px solid #000000;
+    background-color: #ffffff;
+  }
+  header {
+    height: 180px;
+    background-image: url("../images/p3/pigeonpea-30.png");
+    background-repeat:no-repeat;
+  }
+  header h4 {
+    margin-left: 200px;
+  }
+  h1 {
+    text-indent: 0px;
+    width: 740px;
+    height: 40px;
+    margin: 0px;
+    padding-left:150px;
+    padding-top: 50px;
+  }
+  nav, footer {
+    clear: both;
+    color: #ffffff;
+    background-color: #aeaca8;
+    height: 30px;
+    margin-top: 30px;
+  }
+  nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+  }
+  nav li {
+    display: inline;
+    margin-right: 40px;
+    font-size:larger;
+  }
+  nav li a {
+    color: #ffffff;
+  }
+  nav li a:hover, nav li a.current {
+    color: #000000;
+  }
+  section.main-section{
+    float: left;
+    width: 659px;
+    border-right: 1px solid #eeeeee;
+  }
+  article {
+    clear: both;
+    overflow: auto;
+    width: 100%;
+  }
+  hgroup {
+    margin-top: 40px;
+  }
+  figure {
+    float: left;
+    /* width: 290px; */
+    height: 335px;
+    padding: 5px;
+    margin: 20px;
+    border: 1px solid #eeeeee;
+  }
+  figcaption {
+    font-size: 90%;
+    text-align: left;
+  }
+  aside {
+    width: 230px;
+    float: left;
+    padding: 0px 0px 0px 20px;
+    margin-top: 20px;
+  }
+  aside section a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee;
+  }
+  aside section a:hover {
+    color: #985d6a;
+    background-color: #eeeeee;
+  }
+  a {
+    color: #1f4a64;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #4297c5;
+  }
+  h1, h2, h3, h4 {
+    font-weight: normal;
+  }
+  h2 {
+    margin: 10px 0px 5px 0px;
+    padding: 0px;
+  }
+  h3 {
+    margin: 0px 0px 10px 0px;
+    color: #de6581;
+  }
+  h4 {
+    margin: 0px 0px 10px 0px;
+  }
+  aside h2 {
+    padding: 10px 0px 10px 0px;
+  }
+  footer {
+    font-size: 80%;
+    padding: 7px 0px 0px 20px;
+  }
+  footer a {
+    float: right;
+    margin-right: 20px;;
+  }
+  .container {
+    width: 100%;
+  }
+  .columnleft {
+    flex: 0 0 32%;
+    order: -1;
+    padding: 0 1rem;
+    max-width: 32%;
+  }
+  /* p3 video style */
+.p3-ul {
+  list-style-type: none;
+  padding-top: 20px;
+}
