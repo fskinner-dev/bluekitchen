@@ -18,7 +18,7 @@
   }
   header {
     height: 180px;
-    background-image: url("../images/p3/pigeonpea-30.png");
+    background-image: url("../images/dfl/dfl-logo-30.jpg");
     background-repeat:no-repeat;
   }
   header h4 {
@@ -58,6 +58,7 @@
     float: left;
     width: 659px;
     border-right: 1px solid #b0b0b0;
+    ;
   }
   article {
     clear: both;
@@ -69,7 +70,7 @@
   }
   figure {
     float: left;
-    width: 290px;
+    /* width: 290px; */
     height: 335px;
     padding: 5px;
     margin: 20px;
@@ -117,6 +118,7 @@
   }
   aside h2 {
     padding: 10px 0px 10px 0px;
+    color: #eeeeee;
   }
   footer {
     font-size: 80%;
@@ -134,13 +136,13 @@
   padding-top: 20px;
   }
   /* Style all font awesome icons */
-  .fa {
-    padding: 5px;
-    width: 20px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-  }
+.fa {
+  padding: 5px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
 
 /* Add a hover effect if you want */
 .fa:hover {
@@ -165,17 +167,4 @@
 .fa-envelope {
   padding: 0px 15px;
   margin-left: -15px;
-}
-/* Style buttons */
-.btn {
-  background-color: DodgerBlue;
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  cursor: pointer;
-  font-size: 20px;
-}
-/* Darker background on mouse-over */
-.btn:hover {
-  background-color: RoyalBlue;
 }
