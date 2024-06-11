@@ -4,17 +4,9 @@
   
   (function (global) {
     var mc = {};     // mc prefix for menu called functions
-    var cbNavData = {};   // local cache of data from cb-nav.json
     
-    var bkAsideHtml = "views/bk-aside.html";
-    var bkNavHtml = "views/bk-nav.html";
-    var cbAsideHtml = "views/cb-aside.html";
-    var cbNavHtml = "views/cb-nav.html";
-    var cbNavJsonPath = "data/cb-nav.json";
+    var dflMainHtml = "views/dfl-main.html";
     var dflAsideHtml = "views/dfl-aside.html";
-    var dflNavHtml = "views/dfl-nav.html";
-    var p3AsideHtml = "views/p3-aside.html";
-    var p3NavHtml = "views/p3-nav.html";
     
     //-------------------//
     // UTILITY FUNCTIONS //
@@ -47,10 +39,10 @@
       document.querySelector("#home").className = classes;
   
       // Add 'active' to menu button if not already there
-      classes = document.querySelector("#cb").className;
+      classes = document.querySelector("#cookbook").className;
       if (classes.indexOf("current") == -1) {
         classes += " current";
-        document.querySelector("#cb").className = classes;
+        document.querySelector("#cookbook").className = classes;
       }
     };
 
@@ -60,17 +52,17 @@
 
     // On page load
     document.addEventListener("DOMContentLoaded", function (event) {
-      showLoading("#nav-content");
+      showLoading("#main-content");
       $ajaxUtils.sendGetRequest(
-        bkNavHtml,
+        dflMainHtml,
         function (responseText) {
-          document.querySelector("#nav-content").innerHTML = responseText;
+          document.querySelector("#main-content").innerHTML = responseText;
         },
         false
       );
       
       $ajaxUtils.sendGetRequest(
-        bkAsideHtml,
+        dflAsideHtml,
         function (responseText) {
           document.querySelector("#aside-content").innerHTML = responseText;
         },
@@ -108,92 +100,18 @@
     }
 
     // called from home page menu when cookbook is clicked
-    mc.loadCbNav = function () {
-      var headerId = "header-img";
-      var headerH1 = "header-h1";
-      var headerH4 = "header-h4";
-      
-      var header = document.getElementById(headerId);
-      header.setAttribute('style', 'background-image: url("../images/bk-white-logo.JPG")',
-        'background-repeat:no-repeat;');
-      
-      document.getElementById(headerH1).innerHTML = "Blue Kitchen, Inc.";
-      document.getElementById(headerH4).innerHTML = "a Florida non-profit corporation";
-      // showLoading("#nav-content");
+    mc.loadCookbookNav = function () {
+      // showLoading("#main-content");
       $ajaxUtils.sendGetRequest(
         cbNavHtml,
         function(cbNavHtml){
           // Switch CSS class active to menu button
           switchMenuToActive();
-          insertHtml("#nav-content", cbNavHtml);
+          insertHtml("#main-content", cbNavHtml);
         },
         false
       );
       mc.clearAside();
-    };
-
-    mc.loadDflHeader = function() {
-      // showLoading("#nav-content");
-      var headerId = "header-img";
-      var headerH1 = "header-h1";
-      var headerH4 = "header-h4";
-
-      var header = document.getElementById(headerId);
-      header.setAttribute('style', 'background-image: url("../images/dfl/dfl-logo-30.jpg")',
-  'background-repeat:no-repeat;');
-
-      document.getElementById(headerH1).innerHTML = "Drum for Life";
-      document.getElementById(headerH4).innerHTML = "a project of Blue Kitchen, Inc.";
-      $ajaxUtils.sendGetRequest(
-        dflNavHtml,
-        function(dflNavHtml){
-          // Switch CSS class active to menu button
-          switchMenuToActive();
-          insertHtml("#nav-content", dflNavHtml);
-        },
-        false
-      );
-      $ajaxUtils.sendGetRequest(
-        dflAsideHtml,
-        function(dflAsideHtml){
-          // Switch CSS class active to menu button
-          switchMenuToActive();
-          insertHtml("#aside-content", dflAsideHtml);
-        },
-        false
-      );
-    };
-
-    mc.loadP3Header = function() {
-      // showLoading("#nav-content");
-      var headerId = "header-img";
-      var headerH1 = "header-h1";
-      var headerH4 = "header-h4";
-
-      var header = document.getElementById(headerId);
-      header.setAttribute('style', 'background-image: url("../images/p3/pigeonpea-30.png")',
-  'background-repeat:no-repeat;');
-
-      document.getElementById(headerH1).innerHTML = "Pigeon Pea Project";
-      document.getElementById(headerH4).innerHTML = "a project of Blue Kitchen, Inc.";
-      $ajaxUtils.sendGetRequest(
-        p3NavHtml,
-        function(p3NavHtml){
-          // Switch CSS class active to menu button
-          switchMenuToActive();
-          insertHtml("#nav-content", p3NavHtml);
-        },
-        false
-      );
-      $ajaxUtils.sendGetRequest(
-        p3AsideHtml,
-        function(p3AsideHtml){
-          // Switch CSS class active to menu button
-          switchMenuToActive();
-          insertHtml("#aside-content", p3AsideHtml);
-        },
-        false
-      );
     };
   
   //   // 'categoryShort' is a short_name for a category

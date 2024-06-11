@@ -6,27 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blue Kitchen, Inc.</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <div class="wrapper">
       <header>
+        <div id="header-img">
         <hgroup>
-          <h1>Blue Kitchen, Inc.</h1>
-          <h4>a Florida non-profit corporation</h4>
+          <h1 id="header-h1">Blue Kitchen, Inc.</h1>
+          <h4 id="header-h4">a Florida non-profit corporation</h4>
         </hgroup>
+        </div>
         <nav>
           <ul>
             <li><a href="" id="home" class="current">home</a></li>
-            <li><a href="p3-home.html" id="p3">pigeon pea project</a></li> 
-            <li><a href="drumforlife.html" id="dfl">drum for life</a></li>             
-            <li><a href="#" id="cookbook" onclick="$mc.loadCookbookNav();">blue kitchen cookbook</a></li>
-            <li><a href="#" id="about">about</a></li> 
+            <li><a href="#" id="p3" onclick="$mc.loadP3Header();">pigeon pea project</a></li> 
+            <li><a href="#" id="dfl" onclick="$mc.loadDflHeader();">drum for life</a></li>           
+            <li><a href="#" id="cb" onclick="$mc.loadCbNav();">blue kitchen cookbook</a></li>
+            <li><a href="#" id="about">about</a></li>
           </ul>
         </nav>
       </header>
 
-      <section class="main-section">
-        <div id="main-content"></div>
+      <section class="nav-section">
+        <div id="nav-content"></div>
       </section>        
       <aside>
         <section class="aside-section">
@@ -36,7 +39,10 @@
 
       <footer>
           &copy; 2024 Blue Kitchen, Inc.
-          <a href="mailto:bluekitchenmuse@icloud.com">email: bluekitchenmuse@icloud.com</a>
+          <a href="mailto:bluekitchenmuse@icloud.com" class="fa fa-envelope" style="font-size:24px"></a>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-youtube"></a>
+          <a href="#" class="fa fa-instagram"></a>
       </footer>
     </div><!-- .wrapper -->
 
