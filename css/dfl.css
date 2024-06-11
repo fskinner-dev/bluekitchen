@@ -16,6 +16,7 @@
     border: 2px solid #000000;
     background-color: #ffffff;
   }
+    /* we will be changing this to logo-img and use styles.css for the global stuff */
   header {
     height: 180px;
     background-image: url("../images/dfl/dfl-logo-30.jpg");

@@ -16,7 +16,7 @@ body {
   border: 2px solid #000000;
   background-color: #ffffff;
 }
-header {
+#header-img {
   height: 180px;
   background-image: url("../images/bk-white-logo.JPG");
   background-repeat:no-repeat;
@@ -60,7 +60,7 @@ nav li a {
 nav li a:hover, nav li a.current {
   color: #000000;
 }
-section.main-section{
+section.nav-section{
   float: left;
   width: 340px;
   border-right: 1px solid #b0b0b0;
@@ -144,6 +144,7 @@ footer a {
   list-style-type: none;
 }
 
+/* can we make this caret more dainty? */
 .caret {
   cursor: pointer;
   -webkit-user-select: none; /* Safari 3.1+ */
@@ -179,7 +180,7 @@ footer a {
 
 /* cookbook css */
 
-.cookbook-nav-links a:hover {
+.cb-nav-links a:hover {
   color: #4297c5;
 }
 /* Style all font awesome icons */
@@ -212,6 +213,110 @@ footer a {
   color: white;
 }
 .fa-envelope {
-  padding: 0px 15px;
+  padding: 0px 14px;
   margin-left: -15px;
+}
+
+/* media queries */
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  .wrapper {
+
+  }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header - this swaps out the header image.  This might be the answer!!!! */
+  #logo-img {
+    background: url('../images/restaurant-logo_medium.png') no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 5px 5px 5px 0;
+  }
+  /* End Header */
+
+  /* Home Page */
+  .wrapper {
+
+  }
+  /* End Home Page */
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Home Page */
+  .wrapper  {
+    
+  }
+  /* End Home Page */
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+  .navbar-brand {
+    padding-top: 10px;
+    height: 80px;
+  }
+  .navbar-brand h1 { 
+    padding-top: 10px;
+    font-size: 5vw; /* 1vw = 1% of viewport width */
+  }
+  .navbar-brand p { 
+    font-size: .6em;
+    margin-top: 12px;
+  }
+  .navbar-brand p img {
+    height: 20px;
+  }
+
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { /* Collapsed nav menu glyph */
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+  /* End Header */
+
+  /* Footer */
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .panel-footer section:nth-child(3) {
+    margin-bottom: 0; /* margin already exists on the whole row */
+  }
+  .panel-footer section hr {
+    width: 50%;
+  }
+  /* End Footer */
+
+  /* Home Page */
+  .wrapper {
+    margin-top: 30px;
+    padding: 0;
+  }
+}
+
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+  /* Header */
+  .navbar-brand h1 { 
+    padding-top: 5px;
+    font-size: 6vw;
+  }
+  /* End Header */
+
+  .col-xxs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 100%;
+  }
 }

@@ -16,7 +16,8 @@
     border: 2px solid #000000;
     background-color: #ffffff;
   }
-  header {
+  /* we will be changing this to logo-img and use styles.css for the global stuff */
+  header {  
     height: 180px;
     background-image: url("../images/p3/pigeonpea-30.png");
     background-repeat:no-repeat;
