@@ -4,20 +4,20 @@ header, section, footer, aside, nav, article, figure, figcaption {
 }
 body {
   color: #1f4a64;
-  background-color: #e2d3b2;
-  background-position: center;
+  /* background-color: #e2d3b2;
+  background-position: center; */
   font-family: Georgia, Times, serif;
   line-height: 1.4em;
   margin: 0px;
 }
 .wrapper {
   width: 1475px;
-  margin: 20px auto 20px auto;
-  border: 2px solid #000000;
+  /* margin: 20px auto 20px auto; */
+  border: 1px solid #000000;
   background-color: #ffffff;
 }
 #header-img {
-  height: 180px;
+  height: 135px;
   background-image: url("../images/bk-white-logo.JPG");
   background-repeat:no-repeat;
 }
@@ -63,7 +63,6 @@ nav li a:hover, nav li a.current {
 section.nav-section{
   float: left;
   width: 340px;
-  border-right: 1px solid #b0b0b0;
 }
 
 article {
@@ -77,11 +76,12 @@ article {
 figure {
   float: left;
   width: 290px;
-  height: 220px;
+  height: 335px;
   padding: 5px;
   margin: 20px;
   border: 1px solid #eeeeee;
 }
+
 figcaption {
   font-size: 90%;
   text-align: left;
@@ -102,6 +102,13 @@ aside section a:hover {
   color: #985d6a;
   background-color: #eeeeee;
 }
+
+section.aside-section{
+  float: left;
+  width: 659px;
+  border-left: 1px solid #b0b0b0;
+}
+
 a {
   color: #1f4a64;
   text-decoration: none;
@@ -216,6 +223,12 @@ footer a {
   padding: 0px 14px;
   margin-left: -15px;
 }
+
+/* p3 */
+.bk-ul {
+  list-style-type: none;
+}
+
 
 /* media queries */
 /********** Large devices only **********/
