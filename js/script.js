@@ -130,9 +130,18 @@
         false
       );
       mc.clearAside();
+      // footer
+      var bkEmail = "footer-email";
+      var bkFb = "footer-fb";
+      var bkYt = "footer-yt";
+      var bkInsta = "footer-insta";
+      var email = document.getElementById(bkEmail);
+      email.setAttribute('href', "mailto:bluekitchenmuse@icloud.com");
+      var fb = document.getElementById(bkFb);
+      fb.setAttribute('href', "https://www.facebook.com/bluekitchen");
     };
 
-    mc.loadDflHeader = function() {
+    mc.loadDfl = function() {
       // showLoading("#nav-content");
       var headerId = "header-img";
       var headerH1 = "header-h1";
@@ -164,8 +173,8 @@
       );
     };
 
-    mc.loadP3Header = function() {
-      // showLoading("#nav-content");
+    mc.loadP3 = function() {
+      // header
       var headerId = "header-img";
       var headerH1 = "header-h1";
       var headerH4 = "header-h4";
@@ -176,6 +185,8 @@
 
       document.getElementById(headerH1).innerHTML = "Pigeon Pea Project";
       document.getElementById(headerH4).innerHTML = "a project of Blue Kitchen, Inc.";
+
+      // nav
       $ajaxUtils.sendGetRequest(
         p3NavHtml,
         function(p3NavHtml){
@@ -185,6 +196,8 @@
         },
         false
       );
+
+      // content
       $ajaxUtils.sendGetRequest(
         p3AsideHtml,
         function(p3AsideHtml){
@@ -194,6 +207,18 @@
         },
         false
       );
+
+      // footer
+      var p3Email = "footer-email";
+      var p3Fb = "footer-fb";
+      var p3Yt = "footer-yt";
+      var p3Insta = "footer-insta";
+      var email = document.getElementById(p3Email);
+      email.setAttribute('href', "mailto:pigeonpeaproject@outlook.com");
+      var fb = document.getElementById(p3Fb);
+      fb.setAttribute('href', "https://www.facebook.com/people/Pigeon-Pea-Project/61559276664883/?mibextid=LQQJ4d");
+      // document.getElementById(p3Yt).innerHTML = 
+      // document.getElementById(p3Insta).innerHTML = 
     };
   
   //   // 'categoryShort' is a short_name for a category
