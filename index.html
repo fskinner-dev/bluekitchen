@@ -12,20 +12,18 @@
     <div class="wrapper">
       <header>
         <div id="header-img">
-        <hgroup>
-          <h1 id="header-h1">Blue Kitchen, Inc.</h1>
-          <h4 id="header-h4">a Florida non-profit corporation</h4>
-        </hgroup>
+          <hgroup>
+            <h1 id="header-h1">Blue Kitchen, Inc.</h1>
+            <h4 id="header-h4">a Florida non-profit corporation</h4>
+          </hgroup>
         </div>
-        <nav>
+        <div id="nav">
           <ul>
-            <li><a href="" id="home" class="current">home</a></li>
-            <li><a href="#" id="p3" onclick="$mc.loadP3();">pigeon pea project</a></li> 
-            <li><a href="#" id="dfl" onclick="$mc.loadDfl();">drum for life</a></li>           
-            <li><a href="#" id="cb" onclick="$mc.loadCbNav();">blue kitchen cookbook</a></li>
-            <li><a href="#" id="about">about</a></li>
+            <li><a href="" id="home" class="current">Home</a></li>       
+            <li id="li-cookbook"><a href="#" id="cb" onclick="$mc.loadCbNav();">Cookbook</a></li>
+            <li><a href="#" id="about">About</a></li>
           </ul>
-        </nav>
+      </div>
       </header>
 
       <section class="nav-section">
@@ -34,8 +32,12 @@
       <aside>
         <section class="aside-section">
           <div id="aside-content"></div>
-        </section>
+          <article class="article-section">
+            <div id="article-content"></div>
+          </article> 
+        </section>     
       </aside>
+
 
       <footer>
           &copy; 2024 Blue Kitchen, Inc.

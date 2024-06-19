@@ -41,16 +41,16 @@
     };
   
     // Remove the class 'active' from home and switch to Menu button
-    var switchMenuToActive = function () {
+    var switchMenuToActive = function (id) {
       var classes = document.querySelector("#home").className;
       classes = classes.replace(new RegExp("current", "g"), "");
       document.querySelector("#home").className = classes;
   
       // Add 'active' to menu button if not already there
-      classes = document.querySelector("#cb").className;
+      classes = document.querySelector(id).className;
       if (classes.indexOf("current") == -1) {
         classes += " current";
-        document.querySelector("#cb").className = classes;
+        document.querySelector("#home").className = classes;
       }
     };
 
@@ -92,7 +92,7 @@
     mc.addTitlePhoto = function(id) {
       console.log('addTitlePhoto called');
       var element = document.getElementById(id);
-      insertHtml("#aside-content", "<img src='images/menu/A.jpg'></img>");
+      insertHtml("#article-content", "<img src='images/menu/A.jpg'></img>");
     }
 
     mc.addRecipePhoto = function(id) {
@@ -100,35 +100,44 @@
       var photo = "";
       photo = id+'.png';
       console.log("photo is " + photo);
-      insertHtml("#aside-content", "<img src=images/menu/"+ photo +"></img>");
+      insertHtml("#article-content", "<img src=images/menu/"+ photo +"></img>");
+    }
+
+    mc.clearNav = function() {
+      insertHtml("#nav-content", "");
     }
 
     mc.clearAside = function() {
       insertHtml("#aside-content", "");
     }
 
-    // called from home page menu when cookbook is clicked
+    mc.clearArticle = function() {
+      insertHtml("#article-content", "");
+    }
+
+    // COOKBOOK NAV
     mc.loadCbNav = function () {
       var headerId = "header-img";
       var headerH1 = "header-h1";
       var headerH4 = "header-h4";
       
       var header = document.getElementById(headerId);
-      header.setAttribute('style', 'background-image: url("../images/bk-white-logo.JPG")',
+      header.setAttribute('style', 'background-image: url("../images/bk-medium-white-logo.JPG")',
         'background-repeat:no-repeat;');
       
-      document.getElementById(headerH1).innerHTML = "Blue Kitchen, Inc.";
-      document.getElementById(headerH4).innerHTML = "a Florida non-profit corporation";
-      // showLoading("#nav-content");
+      document.getElementById(headerH1).innerHTML = "Blue Kitchen Cookbook";
+      document.getElementById(headerH4).innerHTML = "a compilation of our family's favorites";
+      showLoading("#aside-content");
       $ajaxUtils.sendGetRequest(
         cbNavHtml,
         function(cbNavHtml){
           // Switch CSS class active to menu button
-          switchMenuToActive();
-          insertHtml("#nav-content", cbNavHtml);
+          switchMenuToActive("#cb");
+          insertHtml("#aside-content", cbNavHtml);
         },
         false
       );
+
       mc.clearAside();
       // footer
       var bkEmail = "footer-email";
@@ -146,18 +155,23 @@
       var headerId = "header-img";
       var headerH1 = "header-h1";
       var headerH4 = "header-h4";
+      var liCookbook = "li-cookbook";
+      var home = "home";
 
       var header = document.getElementById(headerId);
-      header.setAttribute('style', 'background-image: url("../images/dfl/dfl-logo-30.jpg")',
+      header.setAttribute('style', 'background-image: url("../images/dfl/dfl-logo-medium.jpg")',
   'background-repeat:no-repeat;');
 
-      document.getElementById(headerH1).innerHTML = "Drum for Life";
+      document.getElementById(headerH1).innerHTML = "Drum For Life";
       document.getElementById(headerH4).innerHTML = "a project of Blue Kitchen, Inc.";
+      document.getElementById(liCookbook).innerHTML = "";
+      document.getElementById(home).innerHTML = "back to the kitchen";
+
       $ajaxUtils.sendGetRequest(
         dflNavHtml,
         function(dflNavHtml){
           // Switch CSS class active to menu button
-          switchMenuToActive();
+          // switchMenuToActive("#dfl");
           insertHtml("#nav-content", dflNavHtml);
         },
         false
@@ -166,7 +180,7 @@
         dflAsideHtml,
         function(dflAsideHtml){
           // Switch CSS class active to menu button
-          switchMenuToActive();
+          // switchMenuToActive();
           insertHtml("#aside-content", dflAsideHtml);
         },
         false
@@ -178,20 +192,24 @@
       var headerId = "header-img";
       var headerH1 = "header-h1";
       var headerH4 = "header-h4";
+      var liCookbook = "li-cookbook";
+      var home = "home";
 
       var header = document.getElementById(headerId);
-      header.setAttribute('style', 'background-image: url("../images/p3/pigeonpea-30.png")',
+      header.setAttribute('style', 'background-image: url("../images/p3/pigeonpea-medium.png")',
   'background-repeat:no-repeat;');
 
       document.getElementById(headerH1).innerHTML = "Pigeon Pea Project";
       document.getElementById(headerH4).innerHTML = "a project of Blue Kitchen, Inc.";
+      document.getElementById(liCookbook).innerHTML = "";
+      document.getElementById(home).innerHTML = "back to the kitchen";
 
       // nav
       $ajaxUtils.sendGetRequest(
         p3NavHtml,
         function(p3NavHtml){
           // Switch CSS class active to menu button
-          switchMenuToActive();
+          // switchMenuToActive("#p3");
           insertHtml("#nav-content", p3NavHtml);
         },
         false
@@ -202,7 +220,7 @@
         p3AsideHtml,
         function(p3AsideHtml){
           // Switch CSS class active to menu button
-          switchMenuToActive();
+          // switchMenuToActive();
           insertHtml("#aside-content", p3AsideHtml);
         },
         false
