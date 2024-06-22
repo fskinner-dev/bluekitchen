@@ -1,5 +1,5 @@
 /** Blue Kitchen, Inc. CSS style sheet */
-header, footer {
+header, section, footer, aside, nav, article, figure, figcaption {
   display: block;
 }
 
@@ -25,6 +25,8 @@ body {
   margin-top: 20px;
   margin-left:20px;
   margin-right:20px;
+  margin-bottom:30px;
+  padding-bottom: 20px;
   border-bottom: #1f4a64 solid 1px;
 }
 
@@ -47,6 +49,7 @@ header h4 {
   align-content: center;
   margin-top: 40px;
   margin-bottom: 40px;
+  margin-right: 20px;
 }
 
 img.align-center {
@@ -94,15 +97,15 @@ footer {
   color: #348d22;
 }
 
-nav-section{
-  /* height: 800px;
-  width: 1400px; */
+.nav-section {
+  width: 95%;
+  margin-top: 70px;
+  margin-left: 20px;
 }
 
-article {
-  clear: both;
-  overflow: auto;
-  /* width: 100%; */
+#main-content {
+  width: 70%;
+  float: left;
 }
 
 aside {
@@ -110,6 +113,8 @@ aside {
   float: left;
   padding: 0px 0px 0px 20px;
   margin-top: 20px;
+  /* border-left: 1px solid #b0b0b0; */
+  font-size: 1.5rem;
 }
 
 aside h2 {
@@ -121,22 +126,12 @@ aside section a {
   padding: 10px;
   border-bottom: 1px solid #eeeeee;
 }
+
 aside section a:hover {
   color: #985d6a;
   background-color: #eeeeee;
 }
 
-.aside-section{
-  float: left;
-  border-left: 1px solid #b0b0b0;
-  font-size: 1.5rem;
-}
-
-article {
-  clear: both;
-  overflow: auto;
-  width: 100%;
-}
 
 a {
   color: #22648d;
@@ -188,7 +183,7 @@ footer a {
 }
 
 .caret::before {
-  content: "\25B6";
+  content: "\25B8";
   color: #22648d;
   display: inline-block;
   margin-right: 6px;
@@ -206,6 +201,27 @@ footer a {
 
 .nested {
   display: none;
+}
+
+.cb-nav-links ul {
+  list-style-type: none;
+}
+
+.cb-section {
+  width: 95%;
+  margin-top: 70px;
+  margin-left: 20px;
+}
+
+#cb-content {
+  width: 50%;
+  float: left;
+}
+
+article {
+  /* clear: both; */
+  overflow: auto;
+  padding-top: 50px;
 }
 
 .active {  

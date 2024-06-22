@@ -4,7 +4,7 @@
   
   (function (global) {
     var mc = {};     // mc prefix for menu called functions
-    var cbNavData = {};   // local cache of data from cb-nav.json
+    var tocData = {};   // local cache of data from toc-data.json
     
     var bkAsideHtml = "views/bk-aside.html";
     var bkNavHtml = "views/bk-nav.html";
@@ -12,9 +12,9 @@
     var cbNavHtml = "views/cb-nav.html";
     var cbNavJsonPath = "data/cb-nav.json";
     var dflAsideHtml = "views/dfl-aside.html";
-    var dflNavHtml = "views/dfl-nav.html";
+    var dflMainHtml = "views/dfl-main.html";
     var p3AsideHtml = "views/p3-aside.html";
-    var p3NavHtml = "views/p3-nav.html";
+    var p3MainHtml = "views/p3-main.html";
     
     //-------------------//
     // UTILITY FUNCTIONS //
@@ -54,17 +54,13 @@
       }
     };
 
-    //------------------------//
-    // EVENT DRIVEN FUNCTIONS //
-    //------------------------//
-
     // On page load
     document.addEventListener("DOMContentLoaded", function (event) {
-      showLoading("#nav-content");
+      showLoading("#main-content");
       $ajaxUtils.sendGetRequest(
         bkNavHtml,
         function (responseText) {
-          document.querySelector("#nav-content").innerHTML = responseText;
+          document.querySelector("#main-content").innerHTML = responseText;
         },
         false
       );
@@ -75,7 +71,17 @@
           document.querySelector("#aside-content").innerHTML = responseText;
         },
         false
-      );      
+      );  
+      
+      /* Also fetch the cookbook data and store it in global tocData */
+      fetch('data/toc-data.json')
+        .then(response => response.json())
+        .then(data => {
+          tableOfContents = data; 
+          tocData = tableOfContents;  
+          // console.log(tocData);       
+        })
+      .catch(error => console.error("Error fetching JSON data:", error));
     });
 
     mc.toggleClass = function(id) {
@@ -89,22 +95,8 @@
       element.parentElement.querySelector(".title").classList.toggle("title-underline");     
     }
 
-    mc.addTitlePhoto = function(id) {
-      console.log('addTitlePhoto called');
-      var element = document.getElementById(id);
-      insertHtml("#article-content", "<img src='images/menu/A.jpg'></img>");
-    }
-
-    mc.addRecipePhoto = function(id) {
-      var element = document.getElementById(id);
-      var photo = "";
-      photo = id+'.png';
-      console.log("photo is " + photo);
-      insertHtml("#article-content", "<img src=images/menu/"+ photo +"></img>");
-    }
-
     mc.clearNav = function() {
-      insertHtml("#nav-content", "");
+      insertHtml("#main-content", "");
     }
 
     mc.clearAside = function() {
@@ -112,10 +104,14 @@
     }
 
     mc.clearArticle = function() {
-      insertHtml("#article-content", "");
+      insertHtml("#recipe-title", "");
+      insertHtml("#recipe-photo", "");
+      insertHtml("#recipe-description", "");
     }
 
-    // COOKBOOK NAV
+    // --------
+    // COOKBOOK
+    // --------
     mc.loadCbNav = function () {
       var headerId = "header-img";
       var headerH1 = "header-h1";
@@ -127,18 +123,20 @@
       
       document.getElementById(headerH1).innerHTML = "Blue Kitchen Cookbook";
       document.getElementById(headerH4).innerHTML = "a compilation of our family's favorites";
-      showLoading("#aside-content");
+      showLoading("#cb-content");
       $ajaxUtils.sendGetRequest(
         cbNavHtml,
         function(cbNavHtml){
           // Switch CSS class active to menu button
           switchMenuToActive("#cb");
-          insertHtml("#aside-content", cbNavHtml);
+          mc.clearAside();
+          mc.clearNav();
+          insertHtml("#cb-content", cbNavHtml);
         },
         false
       );
 
-      mc.clearAside();
+      //mc.clearAside();
       // footer
       var bkEmail = "footer-email";
       var bkFb = "footer-fb";
@@ -150,8 +148,49 @@
       fb.setAttribute('href', "https://www.facebook.com/bluekitchen");
     };
 
+    loadRecipePhoto = function(id) {
+      var element = document.getElementById(id);
+      var photo = "";
+      photo = id+'.png';
+      // console.log("photo is " + photo);
+      insertHtml("#recipe-photo", "<img src=images/recipes/"+ photo +"></img>");
+    }
+
+    loadRecipeTitle = function(id) {
+      // id is of the form <short_name><recipes index>
+      var short_name = id.charAt(0);
+      var recipes_index = id.charAt(1);
+      // console.log ("short_name is " + short_name);
+      // console.log ("recipes_index is " + recipes_index);
+      var catIndex = 0;
+
+      for (var i = 0; i < tocData.length; i++){
+        if (tocData[i].short_name == short_name) {
+          catIndex = i;
+          break;
+        }
+      } 
+
+      var title = tocData[catIndex].recipes[recipes_index].title;
+      // console.log("title is " + title);
+      document.querySelector("#recipe-title").innerHTML = title;
+    }
+
+    loadRecipeDescription = function(id) {
+      document.querySelector("#recipe-description").innerHTML = "Recipe Description";
+    }
+
+    mc.loadRecipeOverview = function(id) {
+      loadRecipePhoto(id);
+      loadRecipeTitle(id);
+      loadRecipeDescription(id);
+    }
+
+    // -------------
+    // DRUM FOR LIFE
+    // -------------
     mc.loadDfl = function() {
-      // showLoading("#nav-content");
+
       var headerId = "header-img";
       var headerH1 = "header-h1";
       var headerH4 = "header-h4";
@@ -168,11 +207,11 @@
       document.getElementById(home).innerHTML = "back to the kitchen";
 
       $ajaxUtils.sendGetRequest(
-        dflNavHtml,
-        function(dflNavHtml){
+        dflMainHtml,
+        function(dflMainHtml){
           // Switch CSS class active to menu button
           // switchMenuToActive("#dfl");
-          insertHtml("#nav-content", dflNavHtml);
+          insertHtml("#main-content", dflMainHtml);
         },
         false
       );
@@ -206,11 +245,11 @@
 
       // nav
       $ajaxUtils.sendGetRequest(
-        p3NavHtml,
-        function(p3NavHtml){
+        p3MainHtml,
+        function(p3MainHtml){
           // Switch CSS class active to menu button
           // switchMenuToActive("#p3");
-          insertHtml("#nav-content", p3NavHtml);
+          insertHtml("#main-content", p3MainHtml);
         },
         false
       );
@@ -238,6 +277,10 @@
       // document.getElementById(p3Yt).innerHTML = 
       // document.getElementById(p3Insta).innerHTML = 
     };
+
+
+
+
   
   //   // 'categoryShort' is a short_name for a category
   //   mc.loadRecipeList = function (categoryShort) {
