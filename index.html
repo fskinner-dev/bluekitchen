@@ -12,30 +12,38 @@
     <div class="wrapper">
       <header>
         <div id="header-img">
-        <hgroup>
-          <h1 id="header-h1">Blue Kitchen, Inc.</h1>
-          <h4 id="header-h4">a Florida non-profit corporation</h4>
-        </hgroup>
+          <hgroup>
+            <h1 id="header-h1">Blue Kitchen, Inc.</h1>
+            <h4 id="header-h4">a Florida non-profit corporation</h4>
+          </hgroup>  
         </div>
-        <nav>
+        <div id="nav">
           <ul>
-            <li><a href="" id="home" class="current">home</a></li>
-            <li><a href="#" id="p3" onclick="$mc.loadP3();">pigeon pea project</a></li> 
-            <li><a href="#" id="dfl" onclick="$mc.loadDfl();">drum for life</a></li>           
-            <li><a href="#" id="cb" onclick="$mc.loadCbNav();">blue kitchen cookbook</a></li>
-            <li><a href="#" id="about">about</a></li>
+            <li><a href="" id="home" class="current">Home</a></li>       
+            <li id="li-cookbook"><a href="#" id="cb" onclick="$mc.loadCbNav();">Cookbook</a></li>
+            <li><a href="#" id="about">About</a></li>
           </ul>
-        </nav>
+      </div>
       </header>
 
-      <section class="nav-section">
-        <div id="nav-content"></div>
+      <section class="main-section">
+        <div id="main-content"></div>
       </section>        
       <aside>
         <section class="aside-section">
           <div id="aside-content"></div>
-        </section>
+        </section>     
       </aside>
+
+      <section class="cb-section">
+        <div id="cb-content"></div>
+        <article id="cb-article-content">
+          <p id ="recipe-title"></p>
+          <p id="recipe-photo"></p>
+          <p id="recipe-description"></p>
+        </article>
+      </section>
+
 
       <footer>
           &copy; 2024 Blue Kitchen, Inc.
