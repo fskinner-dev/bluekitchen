@@ -17,16 +17,20 @@
             <h4 id="header-h4">a Florida non-profit corporation</h4>
           </hgroup>  
         </div>
-        <nav>
-          <ul class="bk-ul">
-            <li><a href="" id="home" class="current">Home</a></li>
-            <li><a href="#" id="projects" onclick="$mc.loadProjectNav();">Projects</a></li>       
-            <li><a href="#" id="cb" onclick="$mc.loadCbNav();">Cookbook</a></li>
-            <li><a href="#" id="about">About</a></li>
-          </ul>
-        </nav>
       </header>
-
+      <nav>
+        <ul class="bk-ul">
+          <li><a href="" id="home" class="current">Home</a></li>
+          <li onclick="$mc.toggleClass('projects');"><a href="#">Projects</a>
+            <ul id="projects" class="bk-ul nested">
+              <li><a href="#" onclick="$mc.loadDfl();">Drum For Life</a></li>
+              <li><a href="#" onclick="$mc.loadP3();">Pigeon Pea Project</a></li>
+            </ul>  
+          </li>       
+          <li id="li-cookbook"><a href="#" id="cb" onclick="$mc.loadCbNav();">Cookbook</a></li>
+          <li><a href="#" id="about">About</a></li>
+        </ul>
+      </nav>
 
       <section class="main-section">
         <div id="main-content"></div>
