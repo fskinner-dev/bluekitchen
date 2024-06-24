@@ -44,11 +44,25 @@ body {
   margin: 0 auto;
 };
 
-.wrapper {
+#bk-content {
   overflow: auto;
 }
-
-
+#feature {
+  margin: 1%;
+}
+.column1, .column2, .column3 {
+  width: 31.3%;
+  float: left;
+  margin: 1%;
+}
+.column3 {
+  margin-right: 0%;
+}
+#feature, .article {
+  height: 10em;
+  margin-bottom: 1em;
+  background-color: #f6f6f6;
+}
 
 .project {
   width: 250px;
@@ -73,17 +87,10 @@ figcaption {
   text-align: center;
 }
 
-footer {
-  clear: both;
-  color: #ffffff;
-  background-color: #22648d;
-  height: 40px;
-  margin-top: 20px;
-}
-
 nav {
   clear: both;
   color: #22648d;
+  margin: 1%
   /* float:right; */
 }
 
@@ -169,6 +176,12 @@ h4 {
 footer {
   font-size: 80%;
   padding: 12px 0px 0px 20px;
+  clear: both;
+  color: #22648d;
+  background-color: #ffffff;
+  height: 40px;
+  margin-top: 20px;
+  border-top: #1f4a64 solid 1px;
 }
 
 footer a {
@@ -176,11 +189,6 @@ footer a {
   margin-right: 20px;
 }
 
-.container {
-  width: 100%;
-}
-
-/* can we make this caret more dainty? */
 .caret {
   cursor: pointer;
   -webkit-user-select: none; /* Safari 3.1+ */

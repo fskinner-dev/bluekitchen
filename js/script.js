@@ -123,6 +123,7 @@
         false
       );
       clearContent("#cb-content");
+      clearContent("#bk-content");
     };
 
     // ---------
@@ -138,7 +139,7 @@
         'background-repeat:no-repeat;');
       
       document.getElementById(headerH1).innerHTML = "Blue Kitchen Cookbook";
-      document.getElementById(headerH4).innerHTML = "a compilation of our family's favorites";
+      document.getElementById(headerH4).innerHTML = "a compilation of our family's favorite recipes";
       showLoading("#cb-content");
       $ajaxUtils.sendGetRequest(
         cbNavHtml,
@@ -147,6 +148,7 @@
           // might be able to do both of these in clearContent
           clearContent("#main-content")
           clearContent("#aside-content");
+          clearContent("#bk-content");
           insertHtml("#cb-content", cbNavHtml);
         },
         false
