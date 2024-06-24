@@ -8,7 +8,7 @@ header {
   border-bottom: #1f4a64 solid 1px;
 }
 #header-img {
-  background-image: url("../images/bk-medium-white-logo.JPG");
+  background-image: url("../images/bk/bk-medium-white-logo.JPG");
   background-repeat:no-repeat;
   line-height: 2.5em;
   margin-top: 20px;
@@ -16,7 +16,6 @@ header {
   margin-right:20px;
   margin-bottom:30px;
   padding-bottom: 20px;
-
 }
 h1 {
   padding-left:350px;
@@ -47,9 +46,6 @@ body {
 #bk-content {
   overflow: auto;
 }
-#feature {
-  margin: 1%;
-}
 .column1, .column2, .column3 {
   width: 31.3%;
   float: left;
@@ -59,9 +55,12 @@ body {
   margin-right: 0%;
 }
 #feature, .article {
-  height: 10em;
-  margin-bottom: 1em;
+  height: 4em;
+  margin: 1%;
   background-color: #f6f6f6;
+}
+#feature {
+  padding: 1%;
 }
 
 .project {
@@ -90,7 +89,8 @@ figcaption {
 nav {
   clear: both;
   color: #22648d;
-  margin: 1%
+  margin: 1%;
+  padding: 1em 0;
   /* float:right; */
 }
 
@@ -173,9 +173,14 @@ h4 {
   margin: 0px 0px 10px 0px;
 }
 
+p {
+  text-align: center;
+}
+
 footer {
   font-size: 80%;
   padding: 12px 0px 0px 20px;
+  /* padding: 1em 0; */
   clear: both;
   color: #22648d;
   background-color: #ffffff;
