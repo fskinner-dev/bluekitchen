@@ -7,7 +7,7 @@
     var tocData = {};   // local cache of data from toc-data.json
     
     var bkAsideHtml = "views/bk-aside.html";
-    var bkNavHtml = "views/bk-nav.html";
+    var bkContentHtml = "views/bk-content.html";
     var projNavHtml = "views/proj-nav.html";
     var cbAsideHtml = "views/cb-aside.html";
     var cbNavHtml = "views/cb-nav.html";
@@ -60,11 +60,11 @@
 
     // On page load
     document.addEventListener("DOMContentLoaded", function (event) {
-      showLoading("#main-content");
+      showLoading("#bk-content");
       $ajaxUtils.sendGetRequest(
-        bkNavHtml,
+        bkContentHtml,
         function (responseText) {
-          document.querySelector("#main-content").innerHTML = responseText;
+          document.querySelector("#bk-content").innerHTML = responseText;
         },
         false
       );
@@ -123,6 +123,7 @@
         false
       );
       clearContent("#cb-content");
+      clearContent("#bk-content");
     };
 
     // ---------
@@ -134,11 +135,11 @@
       var headerH4 = "header-h4";
       
       var header = document.getElementById(headerId);
-      header.setAttribute('style', 'background-image: url("../images/bk-medium-white-logo.JPG")',
+      header.setAttribute('style', 'background-image: url("../images/bk/bk-medium-white-logo.JPG")',
         'background-repeat:no-repeat;');
       
       document.getElementById(headerH1).innerHTML = "Blue Kitchen Cookbook";
-      document.getElementById(headerH4).innerHTML = "a compilation of our family's favorites";
+      document.getElementById(headerH4).innerHTML = "a compilation of our family's favorite recipes";
       showLoading("#cb-content");
       $ajaxUtils.sendGetRequest(
         cbNavHtml,
@@ -147,6 +148,7 @@
           // might be able to do both of these in clearContent
           clearContent("#main-content")
           clearContent("#aside-content");
+          clearContent("#bk-content");
           insertHtml("#cb-content", cbNavHtml);
         },
         false

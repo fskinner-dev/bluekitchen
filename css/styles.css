@@ -8,7 +8,7 @@ header {
   border-bottom: #1f4a64 solid 1px;
 }
 #header-img {
-  background-image: url("../images/bk-medium-white-logo.JPG");
+  background-image: url("../images/bk/bk-medium-white-logo.JPG");
   background-repeat:no-repeat;
   line-height: 2.5em;
   margin-top: 20px;
@@ -16,7 +16,6 @@ header {
   margin-right:20px;
   margin-bottom:30px;
   padding-bottom: 20px;
-
 }
 h1 {
   padding-left:350px;
@@ -44,11 +43,25 @@ body {
   margin: 0 auto;
 };
 
-.wrapper {
+#bk-content {
   overflow: auto;
 }
-
-
+.column1, .column2, .column3 {
+  width: 31.3%;
+  float: left;
+  margin: 1%;
+}
+.column3 {
+  margin-right: 0%;
+}
+#feature, .article {
+  height: 4em;
+  margin: 1%;
+  background-color: #f6f6f6;
+}
+#feature {
+  padding: 1%;
+}
 
 .project {
   width: 250px;
@@ -73,17 +86,11 @@ figcaption {
   text-align: center;
 }
 
-footer {
-  clear: both;
-  color: #ffffff;
-  background-color: #22648d;
-  height: 40px;
-  margin-top: 20px;
-}
-
 nav {
   clear: both;
   color: #22648d;
+  margin: 1%;
+  padding: 1em 0;
   /* float:right; */
 }
 
@@ -166,9 +173,20 @@ h4 {
   margin: 0px 0px 10px 0px;
 }
 
+p {
+  text-align: center;
+}
+
 footer {
   font-size: 80%;
   padding: 12px 0px 0px 20px;
+  /* padding: 1em 0; */
+  clear: both;
+  color: #22648d;
+  background-color: #ffffff;
+  height: 40px;
+  margin-top: 20px;
+  border-top: #1f4a64 solid 1px;
 }
 
 footer a {
@@ -176,11 +194,6 @@ footer a {
   margin-right: 20px;
 }
 
-.container {
-  width: 100%;
-}
-
-/* can we make this caret more dainty? */
 .caret {
   cursor: pointer;
   -webkit-user-select: none; /* Safari 3.1+ */
