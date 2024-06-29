@@ -4,7 +4,7 @@
   
   (function (global) {
     var mc = {};     // mc prefix for menu called functions
-    var tocData = {};   // local cache of data from toc-data.json
+    var cbData = {};   // local cache of data from cb-data.json
     
     var bkAsideHtml = "views/bk-aside.html";
     var bkContentHtml = "views/bk-content.html";
@@ -77,13 +77,12 @@
         false
       );  
       
-      /* Also fetch the cookbook data and store it in global tocData */
-      fetch('data/toc-data.json')
+      /* fetch the cookbook data and store it in global cbData */
+      fetch('data/cb-data.json')
         .then(response => response.json())
         .then(data => {
-          tableOfContents = data; 
-          tocData = tableOfContents;  
-          // console.log(tocData);       
+          cbData = data; 
+          // console.log(cbData);       
         })
       .catch(error => console.error("Error fetching JSON data:", error));
     });
@@ -169,23 +168,23 @@
       var element = document.getElementById(id);
       var photo = "";
       photo = id+'.png';
-      insertHtml("#recipe-photo", "<img src=images/recipes/"+ photo +"></img>");
+      insertHtml("#recipe-photo", "<img src=images/cb/"+ photo +"></img>");
     }
 
     loadRecipeTitle = function(id) {
-      // id is of the form <short_name><recipes index> ex. A3
-      var short_name = id.charAt(0);
+      // id is of the form <category_code><recipes index> ex. A3
+      var category_code = id.charAt(0);
       var recipes_index = id.charAt(1);
       var catIndex = 0;
 
-      for (var i = 0; i < tocData.length; i++){
-        if (tocData[i].short_name == short_name) {
+      for (var i = 0; i < cbData.length; i++){
+        if (cbData[i].category_code == category_code) {
           catIndex = i;
           break;
         }
       } 
 
-      var title = tocData[catIndex].recipes[recipes_index].title;
+      var title = cbData[catIndex].recipes[recipes_index].title;
       document.querySelector("#recipe-title").innerHTML = title;
     }
 
