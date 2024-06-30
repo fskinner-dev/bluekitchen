@@ -3,20 +3,13 @@
 //   });
   
   (function (global) {
-    var mc = {};     // mc prefix for menu called functions
+    var mc = {};       // mc prefix for menu called functions
     var cbData = {};   // local cache of data from cb-data.json
     
     var bkAsideHtml = "views/bk-aside.html";
     var bkContentHtml = "views/bk-content.html";
     var projNavHtml = "views/proj-nav.html";
-    var cbAsideHtml = "views/cb-aside.html";
-    var cbNavHtml = "views/cb-nav.html";
     var cbNavJsonPath = "data/cb-nav.json";
-    var dflAsideHtml = "views/dfl-aside.html";
-    var dflMainHtml = "views/dfl-main.html";
-    var p3AsideHtml = "views/p3-aside.html";
-    var p3MainHtml = "views/p3-main.html";
-
     var prevId = "#home";
     
     //-------------------------
@@ -77,7 +70,7 @@
         false
       );  
       
-      /* fetch the cookbook data and store it in global cbData */
+      /* fetch the cookbook data now and store it in global cbData */
       fetch('data/cb-data.json')
         .then(response => response.json())
         .then(data => {
@@ -128,6 +121,9 @@
     // ---------
     // COOKBOOK
     // ---------
+    var cbAsideHtml = "views/cb-aside.html";
+    var cbNavHtml = "views/cb-nav.html";
+
     mc.loadCbNav = function () {
       var headerId = "header-img";
       var headerH1 = "header-h1";
@@ -201,6 +197,9 @@
     // -------------
     // DRUM FOR LIFE
     // -------------
+    var dflAsideHtml = "views/dfl-aside.html";
+    var dflMainHtml = "views/dfl-main.html";
+
     mc.loadDfl = function() {
 
       var headerId = "header-img";
@@ -229,6 +228,13 @@
         false
       );
     };
+
+
+    // ------------------
+    // PIGEON PEA PROJECT
+    // ------------------
+    var p3AsideHtml = "views/p3-aside.html";
+    var p3MainHtml = "views/p3-main.html";
 
     mc.loadP3 = function() {
       var headerId = "header-img";
