@@ -1,0 +1,28 @@
+body, html {height: 100%} 
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+h1 {
+  margin-bottom:64px
+}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-image: url("../images/bk/bk-large-white-logo-45pct.png");
+  background-position: center;
+  min-height: 95%;
+}
+#bkSidebar {
+  font-family: none;
+}
+#growing {
+  max-width:800px
+}
+
+/* media queries */
+@media (max-width: 650px) {
+  .bgimg{
+    background-repeat: no-repeat;
+    background-image: url("../images/bk/bk-mq650-white-logo.png");
+    background-position: center;
+    min-height: 90%;
+  }
+}

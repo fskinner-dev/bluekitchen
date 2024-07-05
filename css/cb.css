@@ -1,0 +1,54 @@
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B8";
+  color: #22648d;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);  
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.nested {
+  display: none;
+}
+
+.cb-nav-links ul {
+  list-style-type: none;
+}
+
+.cb-section {
+  width: 95%;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+#cb-content {
+  width: 50%;
+  float: left;
+}
+
+article {
+  /* clear: both; */
+  overflow: auto;
+  padding-top: 50px;
+}
+
+.active {  
+  display: block;
+}
+

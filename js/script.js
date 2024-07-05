@@ -3,20 +3,13 @@
 //   });
   
   (function (global) {
-    var mc = {};     // mc prefix for menu called functions
+    var mc = {};       // mc prefix for menu called functions
     var cbData = {};   // local cache of data from cb-data.json
     
     var bkAsideHtml = "views/bk-aside.html";
     var bkContentHtml = "views/bk-content.html";
     var projNavHtml = "views/proj-nav.html";
-    var cbAsideHtml = "views/cb-aside.html";
-    var cbNavHtml = "views/cb-nav.html";
     var cbNavJsonPath = "data/cb-nav.json";
-    var dflAsideHtml = "views/dfl-aside.html";
-    var dflMainHtml = "views/dfl-main.html";
-    var p3AsideHtml = "views/p3-aside.html";
-    var p3MainHtml = "views/p3-main.html";
-
     var prevId = "#home";
     
     //-------------------------
@@ -30,11 +23,11 @@
     };
   
     // Show loading icon inside element identified by 'selector'.
-    var showLoading = function (selector) {
-      var html = "<div class='text-center'>";
-      html += "<img src='images/ajax-loader.gif'></div>";
-      insertHtml(selector, html);
-    };
+    // var showLoading = function (selector) {
+    //   var html = "<div class='text-center'>";
+    //   html += "<img src='images/ajax-loader.gif'></div>";
+    //   insertHtml(selector, html);
+    // };
   
     // Return substitute of '{{propName}}' with propValue in given 'string'
     var insertProperty = function (string, propName, propValue) {
@@ -60,7 +53,7 @@
 
     // On page load
     document.addEventListener("DOMContentLoaded", function (event) {
-      showLoading("#bk-content");
+      // showLoading("#bk-content");
       $ajaxUtils.sendGetRequest(
         bkContentHtml,
         function (responseText) {
@@ -77,7 +70,7 @@
         false
       );  
       
-      /* fetch the cookbook data and store it in global cbData */
+      /* fetch the cookbook data now and store it in global cbData */
       fetch('data/cb-data.json')
         .then(response => response.json())
         .then(data => {
@@ -128,26 +121,29 @@
     // ---------
     // COOKBOOK
     // ---------
+    var cbAsideHtml = "views/cb-aside.html";
+    var cbNavHtml = "views/cb-nav.html";
+
     mc.loadCbNav = function () {
-      var headerId = "header-img";
-      var headerH1 = "header-h1";
-      var headerH4 = "header-h4";
+      // var headerId = "header-img";
+      // var headerH1 = "header-h1";
+      // var headerH4 = "header-h4";
       
-      var header = document.getElementById(headerId);
-      header.setAttribute('style', 'background-image: url("../images/bk/bk-medium-white-logo.JPG")',
-        'background-repeat:no-repeat;');
+      // var header = document.getElementById(headerId);
+      // header.setAttribute('style', 'background-image: url("../images/bk/bk-medium-white-logo.JPG")',
+      //   'background-repeat:no-repeat;');
       
-      document.getElementById(headerH1).innerHTML = "Blue Kitchen Cookbook";
-      document.getElementById(headerH4).innerHTML = "a compilation of our family's favorite recipes";
-      showLoading("#cb-content");
+      // document.getElementById(headerH1).innerHTML = "Blue Kitchen Cookbook";
+      // document.getElementById(headerH4).innerHTML = "a compilation of our family's favorite recipes";
+      // showLoading("#cb-content");
       $ajaxUtils.sendGetRequest(
         cbNavHtml,
         function(cbNavHtml){
-          switchMenuToActive("#cb");
+          // switchMenuToActive("#cb");
           // might be able to do both of these in clearContent
-          clearContent("#main-content")
-          clearContent("#aside-content");
-          clearContent("#bk-content");
+          // clearContent("#main-content")
+          // clearContent("#aside-content");
+          // clearContent("#bk-content");
           insertHtml("#cb-content", cbNavHtml);
         },
         false
@@ -201,6 +197,9 @@
     // -------------
     // DRUM FOR LIFE
     // -------------
+    var dflAsideHtml = "views/dfl-aside.html";
+    var dflMainHtml = "views/dfl-main.html";
+
     mc.loadDfl = function() {
 
       var headerId = "header-img";
@@ -229,6 +228,13 @@
         false
       );
     };
+
+
+    // ------------------
+    // PIGEON PEA PROJECT
+    // ------------------
+    var p3AsideHtml = "views/p3-aside.html";
+    var p3MainHtml = "views/p3-main.html";
 
     mc.loadP3 = function() {
       var headerId = "header-img";

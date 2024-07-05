@@ -1,67 +1,182 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blue Kitchen, Inc.</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <div id="header-img">
-          <hgroup>
-            <h1 id="header-h1">Blue Kitchen, Inc.</h1>
-            <h4 id="header-h4">a Florida non-profit corporation</h4>
-          </hgroup>  
-        </div>
-        <nav>
-          <ul class="bk-ul">
-            <li><a href="" id="home" class="current">Home</a></li>
-            <li><a href="#" id="projects" onclick="$mc.loadProjectNav();">Projects</a></li>       
-            <li><a href="#" id="cb" onclick="$mc.loadCbNav();">Cookbook</a></li>
-            <li><a href="#" id="about">About</a></li>
-          </ul>
-        </nav>
-      </header>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blue Kitchen, Inc.</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/cb.css">
 
-      <div id="bk-content">
-      </div>
+<script src="js/cb-script.js"></script>
+<script src="js/ajax-utils.js"></script>
 
-      <section class="main-section">
-        <div id="main-content"></div>
-      </section>        
-      <aside>
-        <section class="aside-section">
-          <div id="aside-content"></div>
-        </section>     
-      </aside>
+</head>
+<body>
 
-      <section class="cb-section">
-        <div id="cb-content"></div>
-        <article id="cb-article-content">
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-xxlarge w3-black w3-opacity w3-hover-opacity-off" id="bkNavbar">
+    <a href="" class="w3-bar-item w3-button">BLUE KITCHEN, INC.</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#projects" class="w3-bar-item w3-button">PROJECTS</a> 
+      <a href="#resources" class="w3-bar-item w3-button">RESOURCES</a>
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a> 
+    </div>
+
+     <!-- Switch to hamburger menu for smaller screens -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a> 
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="bkSidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button">Projects</a>
+  <a href="#resources" onclick="w3_close()" class="w3-bar-item w3-button">Resources</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+</nav>
+
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min">
+  <div>
+    <!-- <span class="w3-text-white w3-hide-xsmall w3-black w3-display-topmiddle w3-padding w3-jumbo" >Blue Kitchen, Inc.</span> -->
+  </div>
+</header>
+
+<!-- Projects Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="projects">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo">PROJECTS</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'DRUM FOR LIFE');" id="dflLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-dark-gray">DRUM FOR LIFE</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'LEGACY COOKBOOK');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-dark-gray">LEGACY COOKBOOK</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'PIGEON PEA PROJECT');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-dark-gray">PIGEON PEA PROJECT</div>
+      </a>
+    </div>
+
+    <div id="DRUM FOR LIFE" class="w3-container menu w3-padding-32 w3-white">
+      <div><img src="images/dfl/dfl-logo-medium.jpg" /></div>
+      <h1><b>text</b> <span class="w3-right w3-tag w3-dark-grey w3-round">text</span></h1>
+      <p class="w3-text-grey">text</p>
+      <hr>
+   
+      <h1><b>text</b> <span class="w3-tag w3-red w3-round">Hot!</span><span class="w3-right w3-tag w3-dark-grey w3-round">price</span></h1>
+      <p class="w3-text-grey">text</p>
+      <hr>
+
+      <h1><b>text</b> <span class="w3-tag w3-grey w3-round">New</span><span class="w3-right w3-tag w3-dark-grey w3-round">text</span></h1>
+      <p class="w3-text-grey">text</p>
+    </div>
+
+    <div id="LEGACY COOKBOOK" class="w3-container menu w3-padding-32 w3-white">
+      <div><img src="images/cb/spices.jpg" /></div>
+      <section class="cb-section" >
+        <div id="cb-content" ></div>
+        <article id="cb-article-content" class="w3-container w3-center">
           <p id ="recipe-title"></p>
           <p id="recipe-photo"></p>
           <p id="recipe-description"></p>
         </article>
-      </section>
+      </section>  
+    </div>
 
 
-      <footer>
-          &copy; 2024 Blue Kitchen, Inc.
-          <a href="mailto:bluekitchenmuse@icloud.com" class="fa fa-envelope" style="font-size:24px" id="footer-email"></a>
-          <a href="#" class="fa fa-facebook" id="footer-fb"></a>
-          <a href="#" class="fa fa-youtube" id="footer-yt"></a>
-          <a href="#" class="fa fa-instagram" id="footer-insta"></a>
-      </footer>
+    <div id="PIGEON PEA PROJECT" class="w3-container menu w3-padding-32 w3-white">
+      <div><img src="images/p3/pigeonpea-medium.png" /></div>
+      <div class="w3-container w3-content w3-center w3-padding-64" id="growing">
+        <h2 class="w3-wide w3-monospace">Growing</h2>
+        <p class="w3-opacity"><i>"Plant peas in the ground."</i></p>
+        <p class="w3-opacity"><i>"No special preparation."</i></p>
+        <p class="w3-opacity"><i>"Grows so easily."</i></p>
+        <p class="w3-justify w3-large w3-monospace w3-twothird">Options: Soak pea seeds overnight or scratch lightly with sandpaper.
+          Ideally plant in late Spring for an October-November harvest, although they may be planted pretty much anytime.
+        </p>  
+          <p class="w3-justify w3-large w3-monospace w3-twothird">Step 1.  Sow dried pigeon pea seed directly to soil outdoors about 3/4-1 inch deep approximately 3-4 feet between rows and 2 feet (at least) between plants. 
+            Plants closer together will not grow as large as those with more space, so if smaller row plants are desired, plant closer together.</p>
+          
+          <p class="w3-justify w3-large w3-monospace w3-twothird">Step 2.  Water seed lightly until sprout appears. Do not overwater.</p>
+          <p class="w3-justify w3-large w3-monospace w3-twothird">Step 3.  Continue to water lightly every other day until plant is approximately 12 inches tall.</p>
+          <p class="w3-justify w3-large w3-monospace w3-twothird">Step 4.  Water every few days after this as they are very drought-tolerant. </p>
+          
+          <p class="w3-justify w3-large w3-monospace w3-twothird">Requires about 140 days from seeding to harvest.</p>
+        
+      <hr>
+    </div><br>
 
-    </div><!-- .wrapper -->
+  </div>
+</div> 
 
-    <!-- jQuery (Bootstrap JS plugins depend on it) -->
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/ajax-utils.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-black w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo">ABOUT</h1>
+    <p>Blue Kitchen, Inc. was founded in 2024</p>
+    <p><strong>Mission Statement</strong></p>
+    <p>To improve.....</p>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-24 w3-xxlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace("w3-dark-gray", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-black";
+  
+  if (menuName == 'LEGACY COOKBOOK'){
+   $mc.loadCbNav();
+  }
+}
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("bkSidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
 </html>
