@@ -251,6 +251,27 @@
 
 	};
 
+	mc.openDoc = function(menuId, menuName) {
+		var i;
+		var x = document.getElementsByClassName("p3-menu");
+		var alreadyActive = false;
+
+		if (document.getElementById(menuName).style.display === "block") {
+			alreadyActive = true;
+		}
+		// clear menu and content
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+			document.getElementById(i).classList.remove("w3-grey");
+		}
+		if (!alreadyActive) {
+			document.getElementById(menuName).style.display = "block";
+			document.getElementById(menuId).classList.add("w3-grey");
+			alreadyActive = false;
+		}
+
+	}
+
 
 	// ------------------do not cross------------------ //
 	global.$mc = mc;
