@@ -7,8 +7,11 @@ h1 {
 .bgimg {
   background-repeat: no-repeat;
   background-image: url("../images/bk/bk-large-white-logo-45pct.png");
-  background-position: center;
+  background-position: top;
   min-height: 95%;
+}
+.bk-ul {
+  list-style-type: none;
 }
 #bkSidebar {
   font-family: none;
@@ -18,11 +21,16 @@ h1 {
 }
 
 /* media queries */
-@media (max-width: 650px) {
+@media (max-width: 996px) {
   .bgimg{
     background-repeat: no-repeat;
     background-image: url("../images/bk/bk-mq650-white-logo.png");
-    background-position: center;
-    min-height: 90%;
+    min-height: 95%;
   }
 }
+@media (max-width: 350px) {
+  #mission {
+    font-size: 85%;
+  }
+}
+
