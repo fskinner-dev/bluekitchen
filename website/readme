@@ -69,13 +69,13 @@ Once you are satisfied with your changes or reach a saveable stopping point, you
      % git commit -m "add your descriptive commit message here"
      ex. git commit -m "my-branch: added edits for pigeon pea project FAQ list"
 
-# Step 6: git push
+# Step 8: git push
 
 Once you have completed all the changes for your branch, and have committed your changes locally also, you are ready to push your branch to the repo.
 
      % git push origin <branchname>
      ex. git push origin my-branch
 
-# Step 7: create a pull request
+# Step 9: create a pull request
 
 Once your branch is in the repo, a pull request is needed to merge your changes into the main branch.
