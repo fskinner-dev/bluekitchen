@@ -6,69 +6,92 @@ A guide to using git commands to modify the content of the bluekitchen git repo 
 
 # Note
 
-To distinguish git commands in this document, all git commands will follow the angle bracket ">".  
+To distinguish commands to type in this document, all commands will follow the "% ".  
 Enter these commands at the command prompt and hit the return button to run them.
 
-# Prep Step
+Open a "terminal" window.
+Go into the BlueKitchen Repo in the terminal
+% ls (optional step to list the directory contents so you know where you are)
+% cd Desktop
+% ls (optional)
+% cd (then type upper case B followed by the tab key)
+% ls (optional)
+% cd WebSite
+% cd bluekitchen
+% cd website
 
-This prep step is done only once (unless corruption of some kind occurs) and is needed to clone the git repo to to your local system.
 
-    > git clone https://github.com/fskinner-dev/bluekitchen.git
+--------------------------------------------------------------------------
 
-Once the prep step is out of the way, the below steps are done in sequence.
-
+#
 # Step 1: git pull
+#
+This step will sync your local bluekitchen repo to the GitHub bluekitchen repository. This ensures you have all the latest updates in your local repo before you post newupdates. This is really important to always sync before you update. Get in the habit of doing this before you start work on any given day.
 
-This step will sync your local bluekitchen repo to the GitHub bluekitchen repo. This ensures you have all the latest updates in your local repo before you post newupdates. This is really important to always sync before you update. Get in the habit of doing this before you start work on any given day.
+    % git pull --all
 
-    > git pull --all
 
+#
 # Step 2: git branch
-
-This step creates a copy of the repo in a new branch like on a tree... only it hasn't yet been attached to the tree yet. You can do whatever you want in your branch and it won't change the "main" branch which is the tree.
+#
+This step creates a copy of the repositorygitgitgitgit in a new branch like on a tree... only it hasn't yet been attached to the tree yet. You can do whatever you want in your branch and it won't change the "main" branch which is the tree.
 You can use the same branch all the time if you like or you may want a new branch name to better suit what you are working on. Note that the repo's main branch is called well... "main".
 
-    > git branch <branchname>
+    % git branch <branchname>
       ex. git branch my-branch
 
-# Step 3: git checkout
 
+#
+# Step 3: git checkout
+#
 This step checks out your branch so when you make edits, you are making edits to your branch, not the main branch which is the tree.
 
-    > git checkout <branchname>
+    % git checkout <branchname>
       ex. git checkout my-branch
 
-# Step 4: make your changes
 
+#
+# Step 4: make your changes
+#
 Regular editing work and iterations.
 
-# Step 5: git status
 
+#
+# Step 5: git status
+#
 This shows what changes have been made at a file level
 
-    > git status
+    % git status
 
+
+#
 # Step 6: git add
-
+#
 This command will add everything you see in the status list to the staged changes list. Staged changes will
 be committed to the branch when we do the git commit later on. If we need to unstage some changes or we don't want to stage all of them right now, that is another couple command which we will cover on as needed basis and add here later. Just know the "." means everything shown in git status will get staged. If you run git status again after running the git add, you will see changes go from red to green which means they are staged for local commit.
 
-    > git add .
+    % git add .
 
+
+#
 # Step 7: git commit
-
+#
 Once you are satisfied with your changes or reach a saveable stopping point, you commit your changes locally to your branch. Because commit requires you enter a message, this creates a record of your changes.
 
-     > git commit -m "add your descriptive commit message here"
+     % git commit -m "add your descriptive commit message here"
      ex. git commit -m "my-branch: added edits for pigeon pea project FAQ list"
 
-# Step 8: git push
 
+#
+# Step 8: git push
+#
 Once you have completed all the changes for your branch, and have committed your changes locally also, you are ready to push your branch to the repo.
 
-     > git push origin <branchname>
+     % git push origin <branchname>
      ex. git push origin my-branch
 
-# Step 9: create a pull request
 
+#
+# Step 9: create a pull request
+#
 Once your branch is in the repo, a pull request is needed to merge your changes into the main branch.
