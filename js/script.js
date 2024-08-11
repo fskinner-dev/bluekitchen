@@ -262,7 +262,9 @@
 		// clear menu and content
 		for (i = 0; i < x.length; i++) {
 			x[i].style.display = "none";
-			document.getElementById(i).classList.remove("w3-grey");
+			if (document.getElementById(i).classList.contains("w3-grey")) {
+				document.getElementById(i).classList.remove("w3-grey");
+			}
 		}
 		if (!alreadyActive) {
 			document.getElementById(menuName).style.display = "block";

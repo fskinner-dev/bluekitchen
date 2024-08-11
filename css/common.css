@@ -28,9 +28,15 @@ h1 {
     min-height: 95%;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 430px) {
+  .bgimg{
+    background-repeat: no-repeat;
+    background-image: url("../images/pigeonpeayes\ FO4126C7743C2\ 2-02.jpeg");
+    min-height: 95%;
+  }
   #mission {
     font-size: 85%;
   }
+  /* 344 width needs logo adjustments and so do heights less than 601 */
 }
 
