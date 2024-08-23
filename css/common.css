@@ -1,23 +1,25 @@
 body, html {height: 100%} 
-body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Trebuchet MS"}
+
 h1 {
   margin-bottom:64px
 }
 .menu {display: none}
-.bgimg {
-  background-repeat: no-repeat;
-  background-image: url("../images/bk/bk-large-white-logo-45pct.png");
-  background-position: top;
-  min-height: 95%;
-}
+
 .bk-ul {
   list-style-type: none;
 }
 #bkSidebar {
   font-family: none;
 }
-#growing {
-  max-width:800px
+#bk_mission {
+  position: relative;
+  top: 200px;
+  font-size: 1.5em;
+}
+#bk_logo {
+  position: relative;
+  top: 10px;
 }
 .tooltip .tooltiptext {
   visibility: hidden;
@@ -39,21 +41,22 @@ h1 {
 
 /* media queries */
 @media (max-width: 996px) {
-  .bgimg{
-    background-repeat: no-repeat;
-    background-image: url("../images/bk/bk-mq650-white-logo.png");
-    min-height: 95%;
+  #bk_mission {
+    position: relative;
+    top:150px;
+    font-size: 1.25em;
+  }
+  #bk_logo {
+    position: relative;
+    top: 40px;
   }
 }
-@media (max-width: 430px) {
-  .bgimg{
-    background-repeat: no-repeat;
-    background-image: url("../images/pigeonpeayes\ FO4126C7743C2\ 2-02.jpeg");
-    min-height: 95%;
-  }
-  #mission {
-    font-size: 85%;
-  }
-  /* 344 width needs logo adjustments and so do heights less than 601 */
+@media (max-width: 600px) {
+  #bk_mission {
+  position: relative;
+  top:0px;
+  font-size: 1.25em;
+}
+
 }
 
