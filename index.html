@@ -23,10 +23,10 @@
         </div>       
         <!-- Right-sided navbar links -->
         <div class="w3-right w3-hide-small w3-hide-medium">
-          <a href="#mission" class="w3-bar-item w3-button"> OUR MISSION</a>
-          <a href="#projects" class="w3-bar-item w3-button"> PROJECTS </a>
+          <a href="#mission" class="w3-bar-item w3-button"> ABOUT US</a>
+          <a href="subpage/projects.html" class="w3-bar-item w3-button"> PROJECTS </a>
           <a href="#resources" class="w3-bar-item w3-button"> RESOURCES </a>
-          <a href="#about" class="w3-bar-item w3-button"> ABOUT US</a>
+          <a href="#about" class="w3-bar-item w3-button"> OUR DIRECTORS</a>
         </div>
         <!-- Switch to hamburger menu for smaller screens -->
         <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" onclick="$mc.w3_open()">
@@ -52,85 +52,19 @@
     <!-- Sidebar on small screens when clicking the menu icon -->
     <nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="bkSidebar">
       <a href="javascript:void(0)" onclick="$mc.w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16"> Close × </a>
-      <a href="#mission" onclick="$mc.w3_close()" class="w3-bar-item w3-button"> Our Mission </a>
-      <a href="#projects" onclick="$mc.w3_close()" class="w3-bar-item w3-button"> Projects </a>
+      <a href="#mission" onclick="$mc.w3_close()" class="w3-bar-item w3-button"> About US\s </a>
+      <a href="subpage/projects.html" onclick="$mc.w3_close()" class="w3-bar-item w3-button"> Projects </a>
       <a href="#resources" onclick="$mc.w3_close()" class="w3-bar-item w3-button"> Resources </a>
-      <a href="#about" onclick="$mc.w3_close()" class="w3-bar-item w3-button"> About Us</a>
+      <a href="#about" onclick="$mc.w3_close()" class="w3-bar-item w3-button"> Our Directors</a>
     </nav>
 
-    <div class="w3-container w3-white w3-padding-64 w3-xxlarge" id="mission">
+    <div class="w3-container w3-white w3-xxlarge" id="mission">
       <div class="w3-content">
-        <h1 class="w3-center w3-xxlarge w3-border-bottom w3-border-black"> OUR MISSION </h1> 
+        <h1 class="w3-center w3-xxlarge w3-border-bottom w3-border-black"> ABOUT US </h1> 
         <p class="mission">A write-up on how Blue Kitchen, Inc. was founded and why and what we aim to do.</p>
       </div>
     </div>  
-    <!-- Projects Container -->
-    <div class="w3-container w3-white w3-padding-64 w3-xxlarge" id="projects">
-      <div class="w3-content">
-        <h1 class="w3-center w3-jumbo w3-border-bottom w3-border-black"> PROJECTS </h1>
-        <div class="w3-row w3-center w3-border w3-border-dark-grey">
-          <a href="javascript:void(0)" onclick="$mc.openMenu(event, 'DRUM FOR LIFE');" id="dflLink">
-            <div class="w3-col s4 tablink w3-padding-large w3-hover-dark-gray"> DRUM FOR LIFE </div>
-          </a>
-          <a href="javascript:void(0)" onclick="$mc.openMenu(event, 'LEGACY COOKBOOK');">
-            <div class="w3-col s4 tablink w3-padding-large w3-hover-dark-gray"> LEGACY COOKBOOK </div>
-          </a>
-          <a href="javascript:void(0)" onclick="$mc.openMenu(event, 'PIGEON PEA PROJECT');">
-            <div class="w3-col s4 tablink w3-padding-large w3-hover-dark-gray"> PIGEON PEA PROJECT </div>
-          </a>
-        </div>
-        <!-- DRUM FOR LIFE CONTAINER -->
-        <div id="DRUM FOR LIFE" class="w3-container menu w3-padding-32 w3-white">
-          <div>
-            <img src="images/dfl/OfficialDFLLogo.png" class="w3-image">
-            <!-- <img src="images/bk/OfficialBKLogo.jpeg" class="w3-image"> -->
-          </div>
-          <section class="dfl-section">
-            <div id="dfl-content"></div>
-            <article id="dfl-aside-content" class="w3-container w3-center"></article>
-          </section>
-        </div>
-        <!-- LEGACY COOKBOOK CONTAINER -->
-        <div id="LEGACY COOKBOOK" class="w3-container menu w3-padding-32 w3-white">
-          <div>
-            <img src="images/cb/OfficialLCBLogo500px.jpg">
-          </div>
-          <section class="cb-section">
-            <div id="cb-content"></div>
-            <article id="cb-article-content" class="w3-container w3-center">
-              <p id="recipe-title"></p>
-              <p id="recipe-photo"></p>
-              <p id="recipe-description"></p>
-            </article>
-          </section>
-        </div>
-        <!-- PIGEON PEA PROJECT CONTAINER -->
 
-        <div id="PIGEON PEA PROJECT" class="w3-container menu w3-padding-32 w3-white">
-          <!-- start of static content -->
-          <div>
-            <img src="images/p3/OfficialPPPLogo600px.png">
-            <p id="p3-haiku" class="w3-center w3-right w3-panel w3-light-grey w3-margin w3-xlarge w3-serif">
-              <i>
-                  "Let's plant pigeon peas!<br>
-                   Just push them into the ground.<br>
-                   They grow easily!" 
-              </i>
-            </p>
-          </div>
-          <!-- end of static content -->
-          <!-- start of dynamic content -->
-          <div class="w3-container w3-content w3-padding-64 w3-xlarge w3-sans-serif">
-            <section class="p3-section">
-              <div id="p3-content"></div>
-              <article id="p3-aside-content" class="w3-container"></article>
-            </section>
-          </div>
-          <!-- end of dynamic content -->
-          <br>
-        </div>
-      </div>
-    </div>  
     <!-- Resources Container -->
     <div class="w3-container w3-padding-64 w3-white w3-grayscale w3-xlarge" id="resources">
       <div class="w3-content">
@@ -141,7 +75,7 @@
     <!-- About Container -->
     <div class="w3-container w3-padding-64 w3-white w3-grayscale w3-xlarge" id="about">
       <div class="w3-content">
-        <h1 class="w3-center w3-jumbo w3-border-bottom w3-border-black"> ABOUT </h1>
+        <h1 class="w3-center w3-jumbo w3-border-bottom w3-border-black"> OUR DIRECTORS </h1>
         <p> Blue Kitchen, Inc. was founded in 2024 </p>
         <p> Who we are </p>
       </div>
