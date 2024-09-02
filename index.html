@@ -1,95 +1,87 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Blue Kitchen, Inc. </title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/cb.css">
+    <title>Blue Kitchen, Inc.</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/cb.css" />
     <script src="js/script.js"></script>
     <script src="js/ajax-utils.js"></script>
   </head>
+
   <body>
-     <!-- Navbar (sit on top) -->
+
+    <!-- Navbar (sit on top menu) -->
     <div class="w3-top">
-      <div class="w3-bar w3-xlarge w3-white w3-hover-opacity-off w3-border-bottom w3-border-black" id="bkNavbar">
-        <!-- Left-sided navbar links -->
+      <div class="w3-bar w3-xlarge w3-white w3-hover-opacity-off w3-border-bottom w3-border-black"
+        id="bkNavbar">
+        <!-- Left navbar link -->
         <div class="w3-left w3-hide-small w3-hide-medium">
-          <a href="" class="w3-bar-item w3-button">BLUE KITCHEN, INC.</a>
-        </div>       
-        <!-- Right-sided navbar links -->
-        <div class="w3-right w3-hide-small w3-hide-medium">
-          <a href="#mission" class="w3-bar-item w3-button"> ABOUT US</a>
-          <a href="subpage/projects.html" class="w3-bar-item w3-button"> PROJECTS </a>
-          <a href="#resources" class="w3-bar-item w3-button"> RESOURCES </a>
-          <a href="#about" class="w3-bar-item w3-button"> OUR DIRECTORS</a>
+          <a href="index.html" class="w3-bar-item w3-button"
+            ><i class="fa fa-home"></i> HOME</a
+          >
         </div>
-        <!-- Switch to hamburger menu for smaller screens -->
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" onclick="$mc.w3_open()">
+        <!-- Right navbar links hide on medium and small screens -->
+        <div class="w3-right w3-hide-small w3-hide-medium">
+          <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick=""> MISSION</a>
+          <a href="projects.html" class="w3-bar-item w3-button">PROJECTS</a>
+          <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="">RESOURCES</a>
+          <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick=""> ABOUT </a>
+        </div>
+
+        <!-- Show hamburger icon for medium and small screens and when clicked display sidebar menu -->
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-hide-large" onclick="$mc.w3_open()">
           <i class="fa fa-bars"></i>
         </a>
       </div>
     </div>
+
+    <!-- Hamburger Side Bar -->
+    <div class="w3-sidebar w3-bar-block w3-animate-left w3-hide-large" style="width:200px;left:0;display:none" id="bkSidebar">
+      <button class="w3-bar-item w3-button w3-large"
+        onclick="$mc.w3_close()">Close &times;
+      </button>
+      <a href="" class="w3-bar-item w3-button" onclick="$mc.w3_close()"><i class="fa fa-home"></i></a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="">Mission</a>
+      <a href="projects.html" class="w3-bar-item w3-button" onclick="">Projects</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="">Resources</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="">About</a>
+    </div>
+
     <!-- LOGO  -->
-    <div class="w3-row-padding">
-      <div class="w3-third">
-        <img src="images/bk/OfficialBKLogo.jpeg" class="w3-image" id="bk_logo">
-      </div>
-      <div class="w3-twothird w3-left">
-        <p id="bk_mission">
-          Our mission is to inspire, empower and educate people to improve their physical, mental, 
-          neurological and financial health.
-        </p>
-      </div>  
-    </div>    
-
-
-   
-    <!-- Sidebar on small screens when clicking the menu icon -->
-    <nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="bkSidebar">
-      <a href="javascript:void(0)" onclick="$mc.w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16"> Close × </a>
-      <a href="#mission" onclick="$mc.w3_close()" class="w3-bar-item w3-button"> About US\s </a>
-      <a href="subpage/projects.html" onclick="$mc.w3_close()" class="w3-bar-item w3-button"> Projects </a>
-      <a href="#resources" onclick="$mc.w3_close()" class="w3-bar-item w3-button"> Resources </a>
-      <a href="#about" onclick="$mc.w3_close()" class="w3-bar-item w3-button"> Our Directors</a>
-    </nav>
-
-    <div class="w3-container w3-white w3-xlarge" id="mission">
-      <div class="w3-content w3-padding-64">
-        <h1 class="w3-center w3-xxlarge w3-border-bottom w3-border-black"> ABOUT US </h1> 
-        <p class="mission">A write-up on how Blue Kitchen, Inc. was founded and why and what we aim to do.</p>
-      </div>
-    </div>  
-
-    <!-- Resources Container -->
-    <div class="w3-container w3-padding-64 w3-white w3-grayscale w3-xlarge" id="resources">
-      <div class="w3-content">
-        <h1 class="w3-center w3-xxlarge w3-border-bottom w3-border-black"> RESOURCES </h1>
-        <p> Link to resources in this section </p>
-      </div>
+    <div class="">
+      <img
+        src="images/bk/OfficialBKLogo.jpeg"
+        class="w3-image"
+        id="bk_logo"
+      />
     </div>
-    <!-- About Container -->
-    <div class="w3-container w3-padding-64 w3-white w3-grayscale w3-xlarge" id="about">
-      <div class="w3-content">
-        <h1 class="w3-center w3-xxlarge w3-border-bottom w3-border-black"> OUR DIRECTORS </h1>
-        <p> Blue Kitchen, Inc. was founded in 2024 </p>
-        <p> Who we are </p>
-      </div>
+
+    <div class="w3-center">
+      <p id="bk_title" class="w3-jumbo">
+        Blue Kitchen, Inc. <br>   
+        <span class="w3-large">a Florida Non-Profit Corporation</span>
+      </p>
     </div>
+
+    <!-- MISSION CONTAINER -->
+    <!-- RESOURCES CONTAINER -->
+    <!-- ABOUT CONTAINER -->
+
     <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-24 w3-xxlarge">
+    <footer class="w3-bottom">
       <i class="fa fa-facebook-official w3-hover-opacity"></i>
       <i class="fa fa-instagram w3-hover-opacity"></i>
       <i class="fa fa-snapchat w3-hover-opacity"></i>
       <i class="fa fa-pinterest-p w3-hover-opacity"></i>
       <i class="fa fa-twitter w3-hover-opacity"></i>
       <i class="fa fa-linkedin w3-hover-opacity"></i>
-      <p class="w3-medium"> Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green"> w3.css </a>
-      </p>
     </footer>
   </body>
 </html>

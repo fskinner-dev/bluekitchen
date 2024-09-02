@@ -48,16 +48,13 @@
 	};
 
 	// Tabbed Menu
-	mc.openMenu = function(evt, menuName) {
-		var i, x, tablinks;
+	mc.openProjectMenu = function(evt, menuName) {
+		var i, x;
 		x = document.getElementsByClassName("menu");
 		for (i = 0; i < x.length; i++) {
 			x[i].style.display = "none";
 		}
-		tablinks = document.getElementsByClassName("tablink");
-		for (i = 0; i < x.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace("w3-white", "");
-		}
+
 		document.getElementById(menuName).style.display = "block";
 		evt.currentTarget.firstElementChild.className += " w3-white";
 
@@ -79,25 +76,19 @@
 	// Toggle between showing and hiding the sidebar when clicking the menu icon
 
 	mc.w3_open = function() {
-		var bkSidebar = document.getElementById("bkSidebar");
-		if (bkSidebar.style.display === 'block') {
-			bkSidebar.style.display = 'none';
-		} else {
-			bkSidebar.style.display = 'block';
-		}
+		document.getElementById("bkSidebar").style.display = "block";
 	}
 
 	// Close the sidebar with the close button
 	mc.w3_close = function() {
-		var bkSidebar = document.getElementById("bkSidebar");
-		bkSidebar.style.display = "none";
+		document.getElementById("bkSidebar").style.display = "none";
 	}
 
 	// On page load
 	document.addEventListener("DOMContentLoaded", function(event) {
 
-		/* fetch the cookbook data now and store it in global cbData */
-		fetch('data/cb-data.json')
+		/* fetch the cookbook data now and store it in global cbData <===== fix this so that we load data for cookbook only */
+		fetch('../data/cb-data.json')
 			.then(response => response.json())
 			.then(data => {
 				cbData = data;
