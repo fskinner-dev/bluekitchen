@@ -7,6 +7,8 @@
 	var cbData = {}; // local cache of data from cb-data.json
 	var projNavHtml = "views/proj-nav.html";
 	var prevId = "#home";
+	var missionHtml = "views/bk-mission.html";
+
 
 	//-------------------------
 	// LOCAL UTILITY FUNCTIONS 
@@ -14,6 +16,9 @@
 
 	// Convenience function for inserting innerHTML for 'select'
 	var insertHtml = function(selector, html) {
+		console.log("here are the parameters: ");
+		console.log(selector);
+		console.log(html);
 		var targetElem = document.querySelector(selector);
 		targetElem.innerHTML = html;
 	};
@@ -264,6 +269,20 @@
 		}
 
 	}
+
+	// ------------------
+	// BK Mission
+	// ------------------
+	mc.loadMission = function() {
+		mc.w3_close();
+		$ajaxUtils.sendGetRequest(
+			missionHtml,
+			function(missionHtml) {
+				insertHtml("#mission-content", missionHtml);
+			},
+			false
+		);
+	};
 
 	// ------------------do not cross------------------ //
 	global.$mc = mc;

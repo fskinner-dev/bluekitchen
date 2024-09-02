@@ -43,33 +43,46 @@ footer {
 }
 
 /* media queries */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1025px) {
   #bk_logo { 
-    width: 600px;
     float: left;
   }
   #bk_title {
+    font-size: 3.5em;
     margin-left: 400px;
-    padding-top: 300px;
+    padding-top: 200px;
+    margin-bottom: 0;
+  }
+  #subtitle {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  #mission-content {
+    font-size:1.5em;
+    padding-left:20px;
   }
 }
-@media (max-width: 996px) {
-  #bk_mission {
-    position: relative;
-    top:150px;
-    font-size: 1.25em;
+@media (max-width: 1024px) {
+  #bk_title {
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 0;
   }
-  #bk_logo {
-    position: relative;
-    top: 40px;
+  #subtitle {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 80px;
+  }
+  #mission-content {
+    font-size:1.5em;
+    padding-left:20px;
   }
 }
 @media (max-width: 600px) {
-  #bk_mission {
-  position: relative;
-  top:0px;
-  font-size: 1.25em;
-}
+  #bk_title {
+    margin-left: 20px;
+    padding-top: 0px;
+  }
 
 }
 

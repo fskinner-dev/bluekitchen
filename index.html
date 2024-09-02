@@ -29,7 +29,7 @@
         </div>
         <!-- Right navbar links hide on medium and small screens -->
         <div class="w3-right w3-hide-small w3-hide-medium">
-          <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick=""> MISSION</a>
+          <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="$mc.loadMission()"> MISSION</a>
           <a href="projects.html" class="w3-bar-item w3-button">PROJECTS</a>
           <!-- <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="">RESOURCES</a> -->
           <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick=""> ABOUT </a>
@@ -48,7 +48,7 @@
         onclick="$mc.w3_close()">Close &times;
       </button>
       <a href="" class="w3-bar-item w3-button" onclick="$mc.w3_close()"><i class="fa fa-home"></i></a>
-      <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="">Mission</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="$mc.loadMission()">Mission</a>
       <a href="projects.html" class="w3-bar-item w3-button" onclick="">Projects</a>
       <!-- <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="">Resources</a> -->
       <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="">About</a>
@@ -64,13 +64,15 @@
     </div>
     <!-- TITLE -->
     <div class="w3-center">
-      <p id="bk_title" class="w3-jumbo">
-        Blue Kitchen, Inc. <br>   
-        <span class="w3-large">a Florida Non-Profit Corporation</span>
+      <p id="bk_title">
+        Blue Kitchen, Inc. 
       </p>
+      <p id="subtitle">a Florida Non-Profit Corporation</p>
     </div>
 
     <!-- MISSION CONTAINER -->
+    <div id="mission-content">
+    </div>
     <!-- RESOURCES CONTAINER -->
     <!-- ABOUT CONTAINER -->
 
