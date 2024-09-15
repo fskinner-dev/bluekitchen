@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blue Kitchen Legacy Cookbook</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/cb.css" />
+    <script src="js/script.js"></script>
+    <script src="js/ajax-utils.js"></script>
+  </head>
+  <body>  
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div
+        class="w3-bar w3-xlarge w3-white w3-hover-opacity-off w3-border-bottom w3-border-black"
+        id="lcbNavbar">
+        <!-- Left-sided navbar links -->
+        <div class="w3-left w3-hide-small w3-hide-medium">
+            <a href="index.html" class="w3-bar-item w3-button">
+              <i class="fa fa-home"></i> HOME</a>
+            <a href="projects.html" class="w3-bar-item w3-button">
+              <i class="fa fa-lightbulb-o"></i> PROJECTS</a>
+        </div>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small w3-hide-medium">
+          <a href="#donate" class="w3-bar-item w3-button">
+            <i class="fa fa-heart"></i> DONATE
+          </a>
+          <a href="#volunteer" class="w3-bar-item w3-button">
+            <i class="fa fa-handshake-o"></i> VOLUNTEER
+          </a>
+          <a href="#faq" class="w3-bar-item w3-button">
+            <i class="fa fa-question"></i> FAQ
+          </a>
+        </div>  
+        <!-- Switch to hamburger menu for smaller screens -->
+        <a
+          href="javascript:void(0)"
+          class="w3-bar-item w3-button w3-left w3-hide-large"
+          onclick="$mc.w3_open('lcbHamburger')">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hamburger Side Bar -->
+    <div class="w3-sidebar w3-bar-block w3-animate-left w3-hide-large" style="width:200px;left:0;display:none" id="lcbHamburger">
+      <button class="w3-bar-item w3-button w3-large"
+        onclick="$mc.w3_close('lcbHamburger')">Close &times;
+      </button>
+      <a href="index.html" class="w3-bar-item w3-button" onclick="$mc.w3_close('p3Hamburger')">
+        <i class="fa fa-home"></i> HOME</a>
+      <a href="projects.html" class="w3-bar-item w3-button" onclick="">
+        <i class="fa fa-lightbulb-o"></i> PROJECTS</a>
+      <a href="#donate" class="w3-bar-item w3-button">
+        <i class="fa fa-heart"></i> DONATE
+      </a>
+      <a href="#volunteer" class="w3-bar-item w3-button">
+        <i class="fa fa-handshake-o"></i> VOLUNTEER
+      </a>
+      <a href="#faq" class="w3-bar-item w3-button">
+        <i class="fa fa-question"></i> FAQ
+      </a>
+    </div>
+
+    <!-- LEGACY COOKBOOK CONTAINER -->
+    <div id="LEGACY COOKBOOK" class="w3-container menu w3-padding-32 w3-white">
+      <!-- LOGO -->
+      <div>
+        <img src="images/cb/OfficialLCBLogo500px.jpg" class="logo w3-image"/>
+      </div>
+      <!-- TITLE -->
+      <div class="w3-center">
+        <p class="title">
+          Legacy Cookbook 
+        </p>
+        <p class="subtitle">another project of Blue Kitchen, Inc.</p>
+      </div> 
+  
+
+        <section class="cb-section">
+          <div id="cb-content">
+            <div class="cb-nav-links w3-large">
+
+                <ul>
+                  <li onclick="$mc.toggleClass('A');"><span class="caret">Appetizers and Sides</span>
+                    <ul id="A" class="nested">
+                      <a href="#" id="A0" onmouseenter="$mc.loadRecipeOverview('A0')" onmouseleave="$mc.clearArticle();">
+                        <li>Bean Salsa</li>
+                      </a>  
+                      <a href="#"  id="A1" onmouseenter="$mc.loadRecipeOverview('A1')" onmouseleave="$mc.clearArticle();">
+                        <li>Broccoli Bread</li>
+                      </a>  
+                      <a href="#"  id="A2" onmouseenter="$mc.loadRecipeOverview('A2')" onmouseleave="$mc.clearArticle();">
+                        <li>Campground Mac and Cheese</li>
+                      </a>  
+                      <a href="#"  id="A3" onmouseenter="$mc.loadRecipeOverview('A3')" onmouseleave="$mc.clearArticle();">  
+                        <li>Lil’ Jimmy Harper’s Gag-a-Maggot</li>
+                      </a>  
+                      <a href="#"  id="A4" onmouseenter="$mc.loadRecipeOverview('A4')" onmouseleave="$mc.clearArticle();">
+                        <li>Refrigerator Rolls</li>
+                      </a>  
+                      <a href="#"  id="A5" onmouseenter="$mc.loadRecipeOverview('A5')" onmouseleave="$mc.clearArticle();">
+                        <li>Roasted Veggie Prana</li>
+                      </a>  
+                    </ul>
+                  </li>
+                  <li onclick="$mc.toggleClass('C');"><span class="caret">Chowders, Soups and Stews</span>
+                    <ul id="C" class="nested">
+                      <a href="#" id="C0" onmouseenter="$mc.loadRecipeOverview('C0')" onmouseleave="$mc.clearArticle();">
+                        <li>Broccoli Potato Cheese Soup</li>
+                      </a>  
+                      <a href="#" id="C1" onmouseenter="$mc.loadRecipeOverview('C1')" onmouseleave="$mc.clearArticle();">  
+                        <li>Island Corn Chowder</li>
+                      </a>  
+                      <a href="#" id="C2" onmouseenter="$mc.loadRecipeOverview('C2')" onmouseleave="$mc.clearArticle();">
+                        <li>Carrot Soup</li>
+                      </a>  
+                      <a href="#" id="C3" onmouseenter="$mc.loadRecipeOverview('C3')" onmouseleave="$mc.clearArticle();">
+                        <li>Chicken and Dumplings</li>
+                      </a>  
+                      <a href="#" id="C4" onmouseenter="$mc.loadRecipeOverview('C4')" onmouseleave="$mc.clearArticle();">
+                        <li>Potato Soup</li>
+                      </a>  
+                      <a href="#" id="C5" onmouseenter="$mc.loadRecipeOverview('C5')" onmouseleave="$mc.clearArticle();">
+                        <li>Quick Soup</li>
+                      </a>  
+                      <a href="#" id="C6" onmouseenter="$mc.loadRecipeOverview('C6')" onmouseleave="$mc.clearArticle();">
+                        <li>True Love Soup</li>
+                      </a>
+                      <a href="#" id="C7" onmouseenter="$mc.loadRecipeOverview('C8')" onmouseleave="$mc.clearArticle();">
+                        <li>Vegetarian Almost Gumbo</li>
+                      </a>  
+                      <a href="#" id="C8" onmouseenter="$mc.loadRecipeOverview('C7')" onmouseleave="$mc.clearArticle();">
+                        <li>Vegetarian Chikn Noodle Soup</li>
+                      </a>  
+                    </ul>
+                  </li>
+                  <li onclick="$mc.toggleClass('Y');"><span class="caret">Desserts</span>
+                    <ul id="Y" class="nested">
+                      <a href="#" id="Y0" onmouseenter="$mc.loadRecipeOverview('Y0')" onmouseleave="$mc.clearArticle();">
+                        <li>Aunt Rose’s Pound Cake</li>
+                      </a>
+                      <a href="#" id="Y1" onmouseenter="$mc.loadRecipeOverview('Y1')" onmouseleave="$mc.clearArticle();">
+                        <li>Banana Nog</li>
+                      </a>  
+                      <a href="#" id="Y2" onmouseenter="$mc.loadRecipeOverview('Y2')" onmouseleave="$mc.clearArticle();">
+                        <li>Bananas for Banana Bread</li>
+                      </a>  
+                      <a href="#" id="Y3" onmouseenter="$mc.loadRecipeOverview('Y3')" onmouseleave="$mc.clearArticle();">
+                        <li>Coconut Rice Pudding</li>
+                      </a>  
+                      <a href="#" id="Y4" onmouseenter="$mc.loadRecipeOverview('Y4')" onmouseleave="$mc.clearArticle();">
+                        <li>Craisin Balls</li>
+                      </a>  
+                      <a href="#" id="Y5" onmouseenter="$mc.loadRecipeOverview('Y5')" onmouseleave="$mc.clearArticle();">
+                        <li>DIY Brownies</li>
+                      </a>  
+                      <a href="#" id="Y6" onmouseenter="$mc.loadRecipeOverview('Y6')" onmouseleave="$mc.clearArticle();">
+                        <li>“Pound-less” Cake</li>
+                      </a>  
+                      <a href="#" id="Y7" onmouseenter="$mc.loadRecipeOverview('Y7')" onmouseleave="$mc.clearArticle();">
+                        <li>Pumpkin Bread</li>
+                      </a>
+                      <a href="#" id="Y8" onmouseenter="$mc.loadRecipeOverview('Y8')" onmouseleave="$mc.clearArticle();">
+                        <li>Rainbow Cheesecake</li>
+                      </a>  
+                    </ul>
+                  </li>
+                  <li onclick="$mc.toggleClass('D');"><span class="caret">Dressings, Marinades and Sauces</span>
+                    <ul id="D" class="nested">
+                      <a href="#" id="D0" onmouseenter="$mc.loadRecipeOverview('D0')" onmouseleave="$mc.clearArticle();">
+                        <li>Alfredo Sauce</li>
+                      </a>  
+                      <a href="#" id="D1" onmouseenter="$mc.loadRecipeOverview('D1')" onmouseleave="$mc.clearArticle();">  
+                        <li>Cajun Cocktail Sauce</li>
+                      </a>  
+                      <a href="#" id="D2" onmouseenter="$mc.loadRecipeOverview('D2')" onmouseleave="$mc.clearArticle();">
+                        <li>Louisiana Marinade</li>
+                      </a>  
+                      <a href="#" id="D3" onmouseenter="$mc.loadRecipeOverview('D3')" onmouseleave="$mc.clearArticle();">
+                        <li>South Carolina Barbecue Sauces</li>
+                      </a>  
+                      <a href="#" id="D4" onmouseenter="$mc.loadRecipeOverview('D4')" onmouseleave="$mc.clearArticle();">
+                        <li>Urban Farm Dressing</li>
+                      </a>  
+                    </ul>
+                  </li>
+                  <li onclick="$mc.toggleClass('K');"><span class="caret">Main Dishes</span>
+                    <ul id="K" class="nested">
+                      <a href="#" id="K0" onmouseenter="$mc.loadRecipeOverview('K0')" onmouseleave="$mc.clearArticle();">
+                        <li>Anything Curry</li>
+                      </a>  
+                      <a href="#" id="K1" onmouseenter="$mc.loadRecipeOverview('K1')" onmouseleave="$mc.clearArticle();">
+                        <li>Butter Chicken</li>
+                      </a>  
+                      <a href="#" id="K2" onmouseenter="$mc.loadRecipeOverview('K2')" onmouseleave="$mc.clearArticle();">
+                        <li>Florida Hot Chicken</li>
+                      </a>  
+                      <a href="#" id="K3" onmouseenter="$mc.loadRecipeOverview('K3')" onmouseleave="$mc.clearArticle();">
+                        <li>Fried Fish Tacos</li>
+                      </a>  
+                      <a href="#" id="K4" onmouseenter="$mc.loadRecipeOverview('K4')" onmouseleave="$mc.clearArticle();">
+                        <li>Garlic-Seared Tofu</li>
+                      </a>  
+                      <a href="#" id="K5" onmouseenter="$mc.loadRecipeOverview('K5')" onmouseleave="$mc.clearArticle();">
+                        <li>No Bourbon Chicken</li>
+                      </a>  
+                      <a href="#" id="K6" onmouseenter="$mc.loadRecipeOverview('K6')" onmouseleave="$mc.clearArticle();">
+                        <li>Quiche</li>
+                      </a>
+                      <a href="#" id="K7" onmouseenter="$mc.loadRecipeOverview('K7')" onmouseleave="$mc.clearArticle();">
+                        <li>Red Beans</li>
+                      </a>   
+                      <a href="#" id="K8" onmouseenter="$mc.loadRecipeOverview('K8')" onmouseleave="$mc.clearArticle();">
+                        <li>Red Beans and Rice</li>
+                      </a>  
+                      <a href="#" id="K9" onmouseenter="$mc.loadRecipeOverview('K9')" onmouseleave="$mc.clearArticle();">
+                        <li>Shepherd’s Pie</li>
+                      </a>  
+                    </ul>
+                  </li>
+                  <li onclick="$mc.toggleClass('P');"><span class="caret">Picnics</span>
+                    <ul id="P" class="nested">
+                      <a href="#" id="P0" onmouseenter="$mc.loadRecipeOverview('P0')" onmouseleave="$mc.clearArticle();">
+                        <li>Fruit Palette</li>
+                      </a>  
+                      <a href="#" id="P1" onmouseenter="$mc.loadRecipeOverview('P1')" onmouseleave="$mc.clearArticle();">
+                        <li>Romaine Wraps</li>
+                      </a>  
+                    </ul>
+                  </li>
+                  <li onclick="$mc.toggleClass('S');"><span class="caret">Salads</span>
+                    <ul id="S" class="nested">
+                      <a href="#" id="S0" onmouseenter="$mc.loadRecipeOverview('S0')" onmouseleave="$mc.clearArticle();">
+                        <li>Carrot Salad</li>
+                      </a>  
+                      <a href="#" id="S1" onmouseenter="$mc.loadRecipeOverview('S1')" onmouseleave="$mc.clearArticle();">
+                        <li>Chickn Salad</li>
+                      </a>
+                      <a href="#" id="S2" onmouseenter="$mc.loadRecipeOverview('S2')" onmouseleave="$mc.clearArticle();">
+                        <li>Cole Slaw</li>
+                      </a>
+                      <a href="#" id="S3" onmouseenter="$mc.loadRecipeOverview('S3')" onmouseleave="$mc.clearArticle();">
+                        <li>Cucumber Salad</li>
+                      </a>  
+                    </ul>
+                  </li>
+                </ul>
+            </div>
+          </div>
+          <article id="cb-article-content" class="w3-container w3-center">
+            <p id="recipe-title"></p>
+            <p id="recipe-photo"></p>
+            <p id="recipe-description"></p>
+          </article>
+        </section>
+    </div> 
+        <!-- Footer -->
+        <footer class="">
+          <i class="fa fa-envelope w3-hover-opacity w3-left"> <a href="mailto: emailaddress@whatever.com"> email</a></i>
+          <i class="fa fa-facebook-official w3-hover-opacity"></i>
+          <i class="fa fa-instagram w3-hover-opacity"></i>
+          <i class="fa fa-snapchat w3-hover-opacity"></i>
+          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+          <i class="fa fa-twitter w3-hover-opacity"></i>
+          <i class="fa fa-linkedin w3-hover-opacity"></i>
+          <i class="fa fa-copyright w3-hover-opacity w3-right"> 2024</i> 
+        </footer>
+  </body>
+</html>

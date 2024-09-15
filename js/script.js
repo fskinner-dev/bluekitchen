@@ -8,12 +8,17 @@
 	var projNavHtml = "views/proj-nav.html";
 	var prevId = "#home";
 
+
+
 	//-------------------------
 	// LOCAL UTILITY FUNCTIONS 
 	//-------------------------
 
 	// Convenience function for inserting innerHTML for 'select'
 	var insertHtml = function(selector, html) {
+		console.log("here are the parameters: ");
+		console.log(selector);
+		console.log(html);
 		var targetElem = document.querySelector(selector);
 		targetElem.innerHTML = html;
 	};
@@ -48,16 +53,13 @@
 	};
 
 	// Tabbed Menu
-	mc.openMenu = function(evt, menuName) {
-		var i, x, tablinks;
+	mc.openProjectMenu = function(evt, menuName) {
+		var i, x;
 		x = document.getElementsByClassName("menu");
 		for (i = 0; i < x.length; i++) {
 			x[i].style.display = "none";
 		}
-		tablinks = document.getElementsByClassName("tablink");
-		for (i = 0; i < x.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace("w3-white", "");
-		}
+
 		document.getElementById(menuName).style.display = "block";
 		evt.currentTarget.firstElementChild.className += " w3-white";
 
@@ -78,32 +80,19 @@
 
 	// Toggle between showing and hiding the sidebar when clicking the menu icon
 
-	mc.w3_open = function() {
-		var bkSidebar = document.getElementById("bkSidebar");
-		if (bkSidebar.style.display === 'block') {
-			bkSidebar.style.display = 'none';
-		} else {
-			bkSidebar.style.display = 'block';
-		}
+	mc.w3_open = function(elementId) {
+		document.getElementById(elementId).style.display = "block";
 	}
 
 	// Close the sidebar with the close button
-	mc.w3_close = function() {
-		var bkSidebar = document.getElementById("bkSidebar");
-		bkSidebar.style.display = "none";
+	mc.w3_close = function(elementId) {
+		document.getElementById(elementId).style.display = "none";
 	}
 
 	// On page load
 	document.addEventListener("DOMContentLoaded", function(event) {
 
-		/* fetch the cookbook data now and store it in global cbData */
-		fetch('data/cb-data.json')
-			.then(response => response.json())
-			.then(data => {
-				cbData = data;
-				// console.log(cbData);       
-			})
-			.catch(error => console.error("Error fetching JSON data:", error));
+
 	});
 
 	clearContent = function(id) {
@@ -151,6 +140,15 @@
 	var cbNavHtml = "views/cb-nav.html";
 
 	mc.loadCbNav = function() {
+		/* fetch the cookbook data now and store it in global cbData <===== fix this so that we load data for cookbook only */
+
+		fetch('../data/cb-data.json')
+			.then(response => response.json())
+			.then(data => {
+				cbData = data;
+				// console.log(cbData);       
+			})
+			.catch(error => console.error("Error fetching JSON data:", error));
 
 		$ajaxUtils.sendGetRequest(
 			cbNavHtml,
@@ -255,6 +253,7 @@
 		var i;
 		var x = document.getElementsByClassName("p3-menu");
 		var alreadyActive = false;
+		document.getElementById("filler").style.display = "none";
 
 		if (document.getElementById(menuName).style.display === "block") {
 			alreadyActive = true;
@@ -273,6 +272,40 @@
 		}
 
 	}
+
+	// ------------------
+	// BK Mission
+	// ------------------
+	var missionHtml = "views/bk-mission.html";
+
+	mc.loadMission = function() {
+		mc.w3_close();
+		clearContent("#about-content");
+		$ajaxUtils.sendGetRequest(
+			missionHtml,
+			function(missionHtml) {
+				insertHtml("#mission-content", missionHtml);
+			},
+			false
+		);
+	};
+
+	// ------------------
+	// BK About
+	// ------------------
+	var aboutHtml = "views/bk-about.html";
+
+	mc.loadAbout = function() {
+		mc.w3_close();
+		clearContent("#mission-content");
+		$ajaxUtils.sendGetRequest(
+			aboutHtml,
+			function(aboutHtml) {
+				insertHtml("#about-content", aboutHtml);
+			},
+			false
+		);
+	};
 
 	// ------------------do not cross------------------ //
 	global.$mc = mc;

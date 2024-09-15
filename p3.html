@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blue Kitchen Projects</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="../css/common.css" />
+    <script src="js/script.js"></script>
+    <script src="js/ajax-utils.js"></script>
+  </head>
+
+  <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div
+        class="w3-bar w3-xlarge w3-white w3-hover-opacity-off w3-border-bottom w3-border-black"
+        id="p3Navbar">
+        <!-- Left-sided navbar links -->
+        <div class="w3-left w3-hide-small w3-hide-medium">
+            <a href="index.html" class="w3-bar-item w3-button">
+              <i class="fa fa-home"></i> HOME</a>
+            <a href="projects.html" class="w3-bar-item w3-button">
+              <i class="fa fa-lightbulb-o"></i> PROJECTS</a>
+        </div>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small w3-hide-medium">
+          <a href="#donate" class="w3-bar-item w3-button">
+            <i class="fa fa-heart"></i> DONATE
+          </a>
+          <a href="#volunteer" class="w3-bar-item w3-button">
+            <i class="fa fa-handshake-o"></i> VOLUNTEER
+          </a>
+          <a href="#faq" class="w3-bar-item w3-button">
+            <i class="fa fa-question"></i> FAQ
+          </a>
+        </div>
+        <!-- Switch to hamburger menu for smaller screens -->
+        <a
+          href="javascript:void(0)"
+          class="w3-bar-item w3-button w3-left w3-hide-large"
+          onclick="$mc.w3_open('p3Hamburger')">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hamburger Side Bar -->
+    <div class="w3-sidebar w3-bar-block w3-animate-left w3-hide-large" style="width:200px;left:0;display:none" id="p3Hamburger">
+      <button class="w3-bar-item w3-button w3-large"
+        onclick="$mc.w3_close('p3Hamburger')">Close &times;
+      </button>
+      <a href="index.html" class="w3-bar-item w3-button" onclick="$mc.w3_close('p3Hamburger')">
+        <i class="fa fa-home"></i> HOME</a>
+      <a href="projects.html" class="w3-bar-item w3-button" onclick="">
+        <i class="fa fa-lightbulb-o"></i> PROJECTS</a>
+      <a href="#donate" class="w3-bar-item w3-button">
+        <i class="fa fa-heart"></i> DONATE
+      </a>
+      <a href="#volunteer" class="w3-bar-item w3-button">
+        <i class="fa fa-handshake-o"></i> VOLUNTEER
+      </a>
+      <a href="#faq" class="w3-bar-item w3-button">
+        <i class="fa fa-question"></i> FAQ
+      </a>
+    </div>
+    <!-- PIGEON PEA PROJECT CONTAINER -->
+    <div id="PIGEON PEA PROJECT" class="w3-container menu w3-white">
+      <!-- LOGO -->
+      <div class="">
+        <img src="images/p3/OfficialPPPLogo500px.png" 
+          class="p3logo w3-image"/>
+      </div>
+      <!-- TITLE -->
+      <div class="w3-center">
+        <p class="title">
+          Pigeon Pea Project 
+        </p>
+        <p class="subtitle">another project of Blue Kitchen, Inc.</p>
+      </div> 
+      <p id="p3-haiku" class="w3-center w3-xlarge w3-serif">
+        <i>
+          "Let's plant pigeon peas!<br />
+          Just push them into the ground.<br />
+          They grow easily!"
+        </i>
+      </p>
+      <!-- <div class="w3-row-padding w3-xlarge w3-margin" style="width:42.08%">
+        <div class="w3-col">
+          <div class="w3-bar w3-border w3-light-grey w3-xlarge w3-center">
+            <a href="javascript:void(0)" id="0" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Sow')">Sow</a>
+            <a href="javascript:void(0)" id="1" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Grow')">Grow</a>
+            <a href="javascript:void(0)" id="3" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Harvest')">Harvest</a>
+            <a href="javascript:void(0)" id="5" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Meals')">Meals</a>
+            <a href="javascript:void(0)" id="4" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Benefits')">Benefits</a>
+            <a href="javascript:void(0)" id="2" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Share')">Share</a>
+            <a href="javascript:void(0)" id="6" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Resources')">Resources</a>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <!-- end of static content -->
+    <!-- start of dynamic content -->
+    
+    <div class="w3-row-padding w3-xlarge w3-margin-top w3-border-top">
+      <div class="w3-col" style="width:50%">
+        <div class="w3-bar w3-border w3-light-grey w3-xlarge p3leftnav w3-margin-top" style="width:80.7%">
+          <a href="javascript:void(0)" id="0" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Sow')">Sow</a>
+          <a href="javascript:void(0)" id="1" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Grow')">Grow</a>
+          <a href="javascript:void(0)" id="3" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Harvest')">Harvest</a>
+          <a href="javascript:void(0)" id="5" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Meals')">Meals</a>
+          <a href="javascript:void(0)" id="4" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Benefits')">Benefits</a>
+          <a href="javascript:void(0)" id="2" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Share')">Share</a>
+          <a href="javascript:void(0)" id="6" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Resources')">Resources</a>
+        </div>          
+        <div id="filler" class="w3-row w3-padding">
+          <div class="w3-container w3-twothird">
+            <img src="../images/p3/IMG_2559.jpg" id="filler" class="w3-image"/>
+          </div>
+        </div>
+        <div id="Sow" class="p3-menu w3-row w3-padding" style="display: none">
+          <h2 class="w3-center">How to Sow Pigeon Peas</h2>
+          <div class="w3-container w3-third">
+            <img src="../images/p3/IMG_2669.jpg" class="w3-image w3-margin-top" />
+          </div>
+          <div class="w3-container w3-twothird">
+            <p class="w3-large w3-justify">
+              Optional: Soak pea seeds overnight or scratch lightly with sandpaper.<br /><br />
+              Ideally, sow seeds in late Spring for an October-November harvest although
+              they may be sowed pretty much anytime. <br /><br />Sow dried pigeon pea
+              seeds directly into the soil outdoors about 3/4-1 inch deep and
+              approximately 3-4 feet between rows and 2 feet (at least) between seeds.
+              <br /><br />Plants that are closer together will not grow as large as
+              those with more space, so if smaller row plants are desired, sow closer
+              together.  Requires about 140 days from seeding to harvest.
+            </p>
+          </div>
+        </div>          
+        <div id="Grow" class="p3-menu w3-row w3-padding" style="display: none">
+          <h2 class="w3-center">How to grow pigeon peas</h2>
+          <div class="w3-container w3-third">
+            <img src="../images/p3/IMG_2716.jpg" class="w3-image w3-margin-top" />
+          </div>
+          <div class="w3-container w3-twothird">
+            <p class="w3-large w3-justify">
+              Water seeds lightly until sprout appears. Do not overwater. <br />
+              Continue to water lightly every other day until plant is approximately 12
+              inches tall.<br />
+              Water every few days after this as they are very drought-tolerant.    
+            </p>
+          </div>
+        </div>          
+        <div id="Share" class="p3-menu w3-row w3-padding" style="display: none">
+          <h2 class="w3-center">Ideas to share pigeon peas</h2>
+          <div class="w3-container w3-third">
+            <img src="../images/p3/IMG_2716.jpg" class="w3-image w3-margin-top" />
+          </div>
+          <div class="w3-container w3-twothird">
+            <p class="w3-large w3-justify">
+              Pigeon peas are so easy to grow that they can make excellent small potted
+              gifts. They prefer to be transplanted when young since their roots grow deep
+              and may be harmed during transplant, but regardless, be sure a take care
+              with longer roots when transplanting. They also grow excellent from
+              direct-sown seeds in the soil. As a prolific producer, sharing seeds for
+              planting with friends, neighbors and community members is encouraged! They
+              also will propagate from dropped peas, so don’t be surprised if baby
+              “volunteer” trees begin growing. These can be easily mowed over or chopped
+              with a machete and will nourish the soil. The main pigeon pea stem can also
+              be used for fire-starting, able to be shared with neighbors who may have
+              chimineas or firebowls and desire smaller first-starting sticks.
+            </p>
+          </div>
+        </div>          
+        <div id="Harvest" class="p3-menu w3-row w3-padding" style="display: none">
+          <h2 class="w3-center">When to harvest pigeon peas</h2>  
+          <div class="w3-container w3-third">
+            <img src="../images/p3/IMG_2364.JPG" class="w3-image w3-margin-top" />
+          </div>
+          <div class="w3-container w3-twothird">
+            <p class="w3-large w3-justify">
+              There are options to either harvest and shell the peas fresh or dried.
+              Here are the two methods: For fresh pigeon peas, harvest when pods are
+              bright green and feel full and filled out. They should be firm to the
+              touch. Removing the peas from the pod by hand. Store unused peas in a
+              freezer bag in the freezer for safe storage. For dried pigeon peas, which
+              are much easier to release from the pod, allow the peas to dry in the pod,
+              on or off the bush. When they have turned brown and are dried out, use a
+              plastic bag or a screen to rough the pods against each other, allowing the
+              peas to easily fall from their pods. Working the bag back and forth
+              between your hands should separate pods from seeds easily. Toss the pods
+              back into the garden to enrich the soil and store the loose dried pigeon
+              peas in a jar. They may now be used as any other dried bean or pea.
+            </p>
+          </div>
+        </div>
+        <div id="Benefits" class="p3-menu w3-row w3-padding" style="display: none">
+          <h2 class="w3-center">Health and Soil Benefits</h2>
+          <div class="w3-container w3-third">
+            <img src="../images/p3/IMG_2364.JPG" class="w3-image w3-margin-top" />
+          </div>
+          <div class="w3-container w3-twothird">
+            <p class="w3-large w3-justify">
+              Pigeon peas are known as “nitrogen fixers,” which means theyleave behind
+              nitrogen into the soil in a form useful for plant life and microbes in the
+              soil. For this reason, they make an excellent “green manure,” which is one
+              of the easiest ways to enrich poor soil. Merely cut branches, leaves, or the
+              entire plant and drop around the garden, under trees, etc. As it decomposes, 
+              it nourishes the soil. This method is called “chop and dropping,” and is our 
+              preferred method of dealing with “weeds,” and other unneeded plants in the 
+              garden. Some may grow pigeon peas for their nitrogen fixing capabilities alone!
+            </p>
+          </div>
+        </div>          
+        <div id="Meals" class="p3-menu w3-row w3-padding" style="display: none">
+          <h2 class="w3-center">Pigeon Pea Meal Planning</h2>  
+          <div class="w3-container w3-third">
+            <img src="../images/p3/IMG_2638.JPG" class="w3-image w3-margin-top" />
+          </div>
+          <div class="w3-container w3-twothird">              
+            <p class="w3-large w3-justify">
+              Pigeon peas have a firm texture and are not apt to become mushy unless
+              cooked deliberately to that point. Cook as you might any other bean, in a
+              pressure cooker, crockpot, or stove top. They are delicious simple with rice
+              for a common dish of “Pigeon Peas and Rice,” or may be cooked, rinsed and
+              used in pasta salads, turned into taco or burrito filling. Other uses for
+              pigeon peas are to grind the dried peas into flour using a pulsing blender
+              or coffee grinder. The resulting corn-meal like textured flour may be used
+              as a “breading” on fried foods like dill pickles or chicken, or even used
+              1/2, 1/2 with all-purpose flour for baked items like brownies. (We’ve
+              actually made brownies with 100 percent pigeon pea flour and found them
+              delicious!)
+            </p>
+          </div>
+        </div>         
+        <div id="Resources" class="p3-menu w3-row w3-padding" style="display: none">
+          <h2 class="w3-center">Additional Resources</h2>
+          <div class="w3-container">            
+            <ul class="w3-ul w3-border">
+              <li>
+                <div class="tooltip">
+                  <a href="artifacts/PlantingReference.pdf" download>
+                    Planting Reference 
+                    <i class="fa fa-download"></i>
+                  </a>
+                  <span class="tooltiptext w3-medium">Click to download pdf file (size 12026 KB)</span>
+                </div>
+                <p class="w3-large">A guide for growing Pigeon Peas, Longevity Spinach and Everglade Tomatoes in your own yard.</p>
+              </li>
+              <li>
+                <div class="tooltip">
+                  <a href="artifacts/296_10_Lifting_eh_level_of_awareness_on__Pigeonpea.pdf" download><i class="fa fa-book"></i>
+                    Lifting the Level of Awareness on Pigeonpea - A Global Perspective
+                    <i class="fa fa-download"></i>
+                  </a> 
+                  <span class="tooltiptext w3-medium">Click to download pdf file (size 5418 KB)</span>
+                </div>
+                <p class="w3-large">by MG Mula and KB Saxena written for the International Crops Research Institute for the Semi-Arid Tropics.</p>
+              </li>
+            </ul>
+          </div>  
+        </div>
+      </div>           
+      <div class="w3-col w3-border-left" style="width:50%">
+        <div class="w3-bar w3-border w3-light-grey w3-xlarge p3leftnav w3-margin-top" style="width:80.7%">
+          <a href="javascript:void(0)" id="0" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Calendar')">Calendar</a>
+          <a href="javascript:void(0)" id="1" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Events')">Events</a>
+          <a href="javascript:void(0)" id="3" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Membership')">Photo Gallery</a>
+          <a href="javascript:void(0)" id="5" class="w3-bar-item w3-button" onclick="$mc.openDoc(id, 'Cookbook')">Pigeon Pea Cookbook</a>
+        </div>
+        <div class="w3-row w3-padding">   
+          <h2 id="p3news" class="w3-center w3-border">Pigeon Pea Project Newsletter</h2>
+          <article class="">
+            <figure>
+              <img src="images/p3/IMG_2716.jpg" alt="Baby Pigeon Pea" />
+              <figcaption>Baby Pigeon Pea Plant</figcaption>
+            </figure>
+            <hgroup>
+              <h2>The Dirt on Soil</h2>
+              <h3>What is nitrogen fixing?</h3>
+            </hgroup>
+            <p class="w3-large">An introduction to how pigeon peas build and benefit the soil.</p>
+          </article>
+          <article class="">
+            <figure>
+              <img src="images/p3/IMG_2716.jpg" alt="Baby Pigeon Pea" />
+              <figcaption>Baby Pigeon Pea Plant</figcaption>
+            </figure>
+            <hgroup>
+              <h2>Why Pigeon Peas</h2>
+              <h3>What is so great about them?</h3>
+            </hgroup>
+            <p class="w3-large">In all its straggly spectacularness you will find many solutions.</p>
+          </article>
+          <article class="">
+            <figure>
+              <img src="images/p3/IMG_2716.jpg" alt="Baby Pigeon Pea" />
+              <figcaption>Baby Pigeon Pea Plant</figcaption>
+            </figure>
+            <hgroup>
+              <h2>Pigeon Pea Project Food Foresting</h2>
+              <h3>Why pigeon peas are great company to a food forest</h3>
+            </hgroup>
+            <p class="w3-large">Pigeon peas are fast growing and offer dappled shade and protection from direct sunlight.</p>
+          </article>
+          <article class="">
+            <figure>
+              <img src="images/p3/IMG_2559.jpg" alt="Baby Pigeon Pea" />
+              <figcaption>Rental Food Foresting </figcaption>
+            </figure>
+            <hgroup>
+              <h2>Food foresting Rental Properties</h2>
+              <h3> Why it is easier than you may think. </h3>
+            </hgroup>
+            <p class="w3-large"> Landlord and Tenant Cooperation is yielding fantastic results.</p>
+          </article>
+          <article class="">
+            <figure>
+              <img src="images/p3/IMG_2364.jpg" alt="Baby Pigeon Pea" />
+              <figcaption>Pigeon Pea Stories</figcaption>
+            </figure>
+            <hgroup>
+              <h2>"Aloof", the Cat and "Cowlick", the Lizzard</h2>
+              <h3>First day in the Pigeon Pea Forest</h3>
+            </hgroup>
+            <p class="w3-large"> </p>
+          </article>  
+        </div>
+      </div>
+    </div>
+    <!-- end of dynamic content -->
+    <br />
+
+    <!-- Footer -->
+    <footer class="">
+      <i class="fa fa-envelope w3-hover-opacity w3-left"> <a href="mailto: emailaddress@whatever.com"> email</a></i>
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <i class="fa fa-copyright w3-hover-opacity w3-right"> 2024</i> 
+    </footer>
+  </body>
+</html>

@@ -1,25 +1,59 @@
-body, html {height: 100%} 
-body,h1,h2,h3,h4,h5,h6 {font-family: "Trebuchet MS"}
-
-h1 {
-  margin-bottom:64px
+a:link {
+  text-decoration: none;
 }
-.menu {display: none}
-
+article {
+  clear: both;
+  overflow: auto;
+  width: 100%;
+}
 .bk-ul {
   list-style-type: none;
-}
-#bkSidebar {
-  font-family: none;
-}
-#bk_mission {
-  position: relative;
-  top: 200px;
-  font-size: 1.5em;
 }
 #bk_logo {
   position: relative;
   top: 10px;
+}
+body, html {
+  height: 100%;
+} 
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Trebuchet MS";
+}
+#filler {
+  display: block;
+  margin-top: 50px;
+}
+figure {
+  float:left;
+}
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #214865;
+  color: white;
+  padding: 15px;
+}
+h1 {
+  margin-bottom:64px
+}
+h1, h2, h3{
+  font-weight: normal;
+}
+.p3leftnav {
+  margin-left: 80px;
+  margin-bottom: 20px;
+}
+.p3logo {
+  float: left;
+  padding-top: 50px;
+  margin-bottom:20px;
+}
+#p3asidecontent {
+  border-left: 1px solid #aaaaaa;
+  padding-left: 20px;
+}
+#p3news {
+  margin-bottom: 50px;
 }
 .tooltip .tooltiptext {
   visibility: hidden;
@@ -29,34 +63,70 @@ h1 {
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
-
-  /* Position the tooltip */
   position: absolute;
   z-index: 1;
 }
-
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
 
-/* media queries */
-@media (max-width: 996px) {
-  #bk_mission {
-    position: relative;
-    top:150px;
-    font-size: 1.25em;
+/* ------------------------ media queries ------------------------*/
+/* ---------- screen > 1026px -----------*/
+@media (min-width: 1025px) {
+  #about-title {
+    font-size:2em;
   }
-  #bk_logo {
-    position: relative;
-    top: 40px;
+  #about-text {
+    font-size:1.25em;
   }
-}
-@media (max-width: 600px) {
-  #bk_mission {
-  position: relative;
-  top:0px;
-  font-size: 1.25em;
+  .logo { 
+    float: left;
+    margin-bottom:20px;
+  }
+  #mission-content {
+    font-size:2em;
+    padding-left:20px;
+  }
+  .title {
+    font-size: 3.5em;
+    /* margin-left: 400px; */
+    padding-top: 150px;
+    margin-bottom: -10px;
+  }
+  .subtitle {
+    font-size: 1.5em;
+    margin: 0;
+  }
 }
 
+/* ----------- screen < 1025px -----------*/
+@media (max-width: 1024px) {
+  #about-title {
+    font-size:1.5em;
+  }
+  #about-text {
+    font-size:1.00em;
+  }
+  #mission-content {
+    font-size:1.5em;
+    padding-left:20px;
+  }
+  .subtitle {
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 80px;
+  }
+  .title {
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+/* ----------- screen < 601px -----------*/
+@media (max-width: 600px) {
+  .title {
+    margin-left: 20px;
+    padding-top: 0px;
+  }
 }
 
