@@ -19,9 +19,9 @@
   transform: rotate(90deg);  
 }
 
-a:link {
+/* a:link {
   text-decoration: none;
-}
+} */
 
 .nested {
   display: none;
@@ -33,7 +33,7 @@ a:link {
 
 .cb-section {
   width: 95%;
-  margin-top: 15px;
+  margin-top: 110px;
   margin-left: 20px;
 }
 

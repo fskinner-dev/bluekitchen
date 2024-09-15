@@ -7,7 +7,7 @@
 	var cbData = {}; // local cache of data from cb-data.json
 	var projNavHtml = "views/proj-nav.html";
 	var prevId = "#home";
-	var missionHtml = "views/bk-mission.html";
+
 
 
 	//-------------------------
@@ -80,26 +80,19 @@
 
 	// Toggle between showing and hiding the sidebar when clicking the menu icon
 
-	mc.w3_open = function() {
-		document.getElementById("bkSidebar").style.display = "block";
+	mc.w3_open = function(elementId) {
+		document.getElementById(elementId).style.display = "block";
 	}
 
 	// Close the sidebar with the close button
-	mc.w3_close = function() {
-		document.getElementById("bkSidebar").style.display = "none";
+	mc.w3_close = function(elementId) {
+		document.getElementById(elementId).style.display = "none";
 	}
 
 	// On page load
 	document.addEventListener("DOMContentLoaded", function(event) {
 
-		/* fetch the cookbook data now and store it in global cbData <===== fix this so that we load data for cookbook only */
-		fetch('../data/cb-data.json')
-			.then(response => response.json())
-			.then(data => {
-				cbData = data;
-				// console.log(cbData);       
-			})
-			.catch(error => console.error("Error fetching JSON data:", error));
+
 	});
 
 	clearContent = function(id) {
@@ -147,6 +140,15 @@
 	var cbNavHtml = "views/cb-nav.html";
 
 	mc.loadCbNav = function() {
+		/* fetch the cookbook data now and store it in global cbData <===== fix this so that we load data for cookbook only */
+
+		fetch('../data/cb-data.json')
+			.then(response => response.json())
+			.then(data => {
+				cbData = data;
+				// console.log(cbData);       
+			})
+			.catch(error => console.error("Error fetching JSON data:", error));
 
 		$ajaxUtils.sendGetRequest(
 			cbNavHtml,
@@ -251,6 +253,7 @@
 		var i;
 		var x = document.getElementsByClassName("p3-menu");
 		var alreadyActive = false;
+		document.getElementById("filler").style.display = "none";
 
 		if (document.getElementById(menuName).style.display === "block") {
 			alreadyActive = true;
@@ -273,12 +276,32 @@
 	// ------------------
 	// BK Mission
 	// ------------------
+	var missionHtml = "views/bk-mission.html";
+
 	mc.loadMission = function() {
 		mc.w3_close();
+		clearContent("#about-content");
 		$ajaxUtils.sendGetRequest(
 			missionHtml,
 			function(missionHtml) {
 				insertHtml("#mission-content", missionHtml);
+			},
+			false
+		);
+	};
+
+	// ------------------
+	// BK About
+	// ------------------
+	var aboutHtml = "views/bk-about.html";
+
+	mc.loadAbout = function() {
+		mc.w3_close();
+		clearContent("#mission-content");
+		$ajaxUtils.sendGetRequest(
+			aboutHtml,
+			function(aboutHtml) {
+				insertHtml("#about-content", aboutHtml);
 			},
 			false
 		);

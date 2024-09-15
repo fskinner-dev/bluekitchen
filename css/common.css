@@ -6,6 +6,10 @@ h1 {
 }
 /* .menu {display: none} */
 
+a:link {
+  text-decoration: none;
+}
+
 footer {
   text-align: center;
   padding: 3px;
@@ -17,13 +21,12 @@ footer {
 .bk-ul {
   list-style-type: none;
 }
-#bkSidebar {
-  /* font-family: none; */
-}
+
 #bk_logo {
   position: relative;
   top: 10px;
 }
+
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
@@ -42,34 +45,49 @@ footer {
   visibility: visible;
 }
 
+#filler {
+  display: block;
+}
+
 /* media queries */
-@media screen and (min-width: 1025px) {
-  #bk_logo { 
+/* LARGE SCREENS >1026px */
+@media (min-width: 1025px) {
+  .logo { 
     float: left;
+    margin-bottom:20px;
   }
-  #bk_title {
+  .title {
     font-size: 3.5em;
     margin-left: 400px;
     padding-top: 200px;
-    margin-bottom: 0;
   }
-  #subtitle {
+  .subtitle {
     font-size: 1.5em;
     margin: 0;
   }
   #mission-content {
-    font-size:1.5em;
+    font-size:2em;
     padding-left:20px;
   }
+
+  #about-title {
+    font-size:2em;
+  }
+  #about-text {
+    font-size:1.25em;
+  }
+
 }
+
+/* MEDIUM SCREENS <1025px */
 @media (max-width: 1024px) {
-  #bk_title {
+  .title {
     font-size: 3em;
     margin-top: 0;
     margin-bottom: 0;
   }
-  #subtitle {
-    font-size: 1.5em;
+  .subtitle {
+    font-size: 1em;
     margin-top: 0;
     margin-bottom: 80px;
   }
@@ -77,9 +95,15 @@ footer {
     font-size:1.5em;
     padding-left:20px;
   }
+  #about-title {
+    font-size:1.5em;
+  }
+  #about-text {
+    font-size:1.00em;
+  }
 }
 @media (max-width: 600px) {
-  #bk_title {
+  .title {
     margin-left: 20px;
     padding-top: 0px;
   }
