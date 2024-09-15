@@ -279,7 +279,7 @@
 	var missionHtml = "views/bk-mission.html";
 
 	mc.loadMission = function() {
-		mc.w3_close();
+		// mc.w3_close();
 		clearContent("#about-content");
 		$ajaxUtils.sendGetRequest(
 			missionHtml,
@@ -296,7 +296,7 @@
 	var aboutHtml = "views/bk-about.html";
 
 	mc.loadAbout = function() {
-		mc.w3_close();
+		// mc.w3_close();
 		clearContent("#mission-content");
 		$ajaxUtils.sendGetRequest(
 			aboutHtml,
