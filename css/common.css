@@ -11,7 +11,8 @@ article {
 }
 #bk_logo {
   position: relative;
-  top: 10px;
+  /* top: 10px; */
+  top: 5%;
 }
 body, html {
   height: 100%;
@@ -21,39 +22,39 @@ body,h1,h2,h3,h4,h5,h6 {
 }
 #filler {
   display: block;
-  margin-top: 50px;
+  /* margin-top: 50px; */
+  margin-top: 9%;
 }
 figure {
   float:left;
 }
 footer {
-  text-align: center;
-  padding: 3px;
   background-color: #214865;
   color: white;
-  padding: 15px;
 }
-h1 {
-  margin-bottom:64px
+
+.main-content-margin-bottom {
+  margin-bottom: 3.75%;
 }
-h1, h2, h3{
-  font-weight: normal;
+.main-content-margin-top {
+  margin-top: -3%;
 }
-.p3leftnav {
-  margin-left: 80px;
-  margin-bottom: 20px;
+
+.p3barnav {
+  /* margin-left: 80px;
+  margin-bottom: 20px; */
+  margin-left: 10%;
+  margin-bottom: 5%;
 }
 .p3logo {
   float: left;
-  padding-top: 50px;
-  margin-bottom:20px;
+  /* padding-top: 50px;
+  margin-bottom:20px; */
+  padding-top: 4%;
+  margin-bottom:4%;
 }
-#p3asidecontent {
-  border-left: 1px solid #aaaaaa;
-  padding-left: 20px;
-}
-#p3news {
-  margin-bottom: 50px;
+#projnav {
+  margin-left: 9%;
 }
 .tooltip .tooltiptext {
   visibility: hidden;
@@ -81,15 +82,19 @@ h1, h2, h3{
   }
   .logo { 
     float: left;
-    margin-bottom:20px;
+    /* margin-bottom:20px; */
+    /* margin-bottom:.25%; */
   }
   #mission-content {
     font-size:2em;
+    padding-left:20px;
     padding-left:20px;
   }
   .title {
     font-size: 3.5em;
     /* margin-left: 400px; */
+    padding-top: 150px;
+    margin-bottom: -10px;
     padding-top: 150px;
     margin-bottom: -10px;
   }
@@ -110,10 +115,12 @@ h1, h2, h3{
   #mission-content {
     font-size:1.5em;
     padding-left:20px;
+    padding-left:20px;
   }
   .subtitle {
     font-size: 1em;
     margin-top: 0;
+    margin-bottom: 80px;
     margin-bottom: 80px;
   }
   .title {
@@ -125,6 +132,7 @@ h1, h2, h3{
 /* ----------- screen < 601px -----------*/
 @media (max-width: 600px) {
   .title {
+    margin-left: 20px;
     margin-left: 20px;
     padding-top: 0px;
   }
