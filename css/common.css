@@ -33,6 +33,13 @@ footer {
   color: white;
 }
 
+.main-content-margin-bottom {
+  margin-bottom: 3.75%;
+}
+.main-content-margin-top {
+  margin-top: -3%;
+}
+
 .p3barnav {
   /* margin-left: 80px;
   margin-bottom: 20px; */
