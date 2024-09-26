@@ -256,21 +256,21 @@
 		document.getElementById("filler").style.display = "none";
 
 		if (document.getElementById(menuName).style.display === "block") {
-			alreadyActive = true;
-		}
-		// clear menu and content
-		for (i = 0; i < x.length; i++) {
-			x[i].style.display = "none";
-			if (document.getElementById(i).classList.contains("w3-grey")) {
-				document.getElementById(i).classList.remove("w3-grey");
+			alreadyActive = true; // user reselected item so nothing changes
+		} else {
+			// clear menu and content
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+				if (document.getElementById(i).classList.contains("w3-grey")) {
+					document.getElementById(i).classList.remove("w3-grey");
+				}
+			}
+			if (!alreadyActive) {
+				document.getElementById(menuName).style.display = "block";
+				document.getElementById(menuId).classList.add("w3-grey");
+				alreadyActive = false;
 			}
 		}
-		if (!alreadyActive) {
-			document.getElementById(menuName).style.display = "block";
-			document.getElementById(menuId).classList.add("w3-grey");
-			alreadyActive = false;
-		}
-
 	}
 
 	// ------------------
