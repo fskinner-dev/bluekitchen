@@ -7,34 +7,41 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/cb.css" />
+    <link rel="stylesheet" href="../css/common.css" />
     <script src="js/script.js"></script>
     <script src="js/ajax-utils.js"></script>
   </head>
 
   <body>
-
-    <!-- Navbar (sit on top menu) -->
+    <!-- Navbar (sit on top) -->
     <div class="w3-top">
-      <div class="w3-bar w3-xlarge w3-white w3-hover-opacity-off w3-border-bottom w3-border-black"
-        id="bkNavbar">
-        <!-- Left navbar link -->
+      <div
+        class="w3-bar w3-xlarge w3-white w3-hover-opacity-off w3-border-bottom w3-border-black"
+        id="projNavbar">
+        <!-- Left-sided navbar links -->
         <div class="w3-left w3-hide-small w3-hide-medium">
           <a href="index.html" class="w3-bar-item w3-button">
-            <i class="fa fa-home"></i> HOME</a>
+            <i class="fa fa-home"></i> Home</a>
         </div>
-        <!-- Right navbar links hidden on medium and small screens -->
+        <!-- Right-sided navbar links hidden on medium and small screens -->
         <div class="w3-right w3-hide-small w3-hide-medium">
-          <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="$mc.loadMission()"> MISSION</a>
-          <a href="projects.html" class="w3-bar-item w3-button">PROJECTS</a>
+          <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="$mc.loadMission()">
+            <i class="fa fa-briefcase" aria-hidden="true"></i> Mission
+          </a>
           <!-- <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="">RESOURCES</a> -->
-          <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="$mc.loadAbout()"> ABOUT </a>
+          <a href="#donate" class="w3-bar-item w3-button">
+            <i class="fa fa-heart"></i> Donate
+          </a>
+          <a href="#volunteer" class="w3-bar-item w3-button">
+            <i class="fa fa-handshake-o"></i> Volunteer
+          </a>
+          <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="$mc.loadAbout()"> 
+            <i class="fa fa-question"></i> About 
+          </a>
         </div>
-
         <!-- Switch to hamburger icon for medium and small screens -->
         <a href="javascript:void(0)" 
-          class="w3-bar-item w3-button w3-left w3-hide-large" 
+          class="w3-bar-item w3-button w3-left w3-hide-large"
           onclick="$mc.w3_open('bkHamburger')">
           <i class="fa fa-bars"></i>
         </a>
@@ -42,15 +49,26 @@
     </div>
 
     <!-- Hamburger Side Bar -->
-    <div class="w3-sidebar w3-bar-block w3-animate-left w3-hide-large" style="width:200px;left:0;display:none" id="bkHamburger">
+    <div class="w3-sidebar w3-bar-block w3-animate-left w3-hide-large" style="width:200px;left:0;display:none" id="projHamburger">
       <button class="w3-bar-item w3-button w3-large"
         onclick="$mc.w3_close('bkHamburger')">Close &times;
       </button>
-      <a href="" class="w3-bar-item w3-button" onclick="$mc.w3_close('bkHamburger')"><i class="fa fa-home"></i> HOME</a>
-      <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="$mc.loadMission()">MISSION</a>
-      <a href="projects.html" class="w3-bar-item w3-button" onclick="">PROJECTS</a>
-      <!-- <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="">Resources</a> -->
-      <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="$mc.loadAbout()">ABOUT</a>
+      <!-- <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="">RESOURCES</a> -->
+      <a href="index.html" class="w3-bar-item w3-button" onclick="$mc.w3_close('projHamburger')">
+        <i class="fa fa-home"></i> Home
+      </a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="$mc.loadMission()">
+        <i class="fa fa-briefcase" aria-hidden="true"></i> Mission
+      </a>
+      <a href="#donate" class="w3-bar-item w3-button">
+        <i class="fa fa-heart"></i> Donate
+      </a>
+      <a href="#volunteer" class="w3-bar-item w3-button">
+        <i class="fa fa-handshake-o"></i> Volunteer
+      </a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="$mc.loadAbout()"> 
+        <i class="fa fa-question"></i> About 
+      </a>
     </div>
 
     <!-- LOGO  -->
@@ -58,7 +76,8 @@
       <img
         src="images/bk/OfficialBKLogo.jpeg"
         class="logo w3-image"
-        id="bk_logo"/>
+        id="bk_logo"
+      />
     </div>
     <!-- TITLE -->
     <div class="w3-center">
@@ -67,23 +86,51 @@
       </p>
       <p class="subtitle">a Florida Non-Profit Corporation</p>
     </div>
+    <p class="w3-center w3-xlarge w3-serif w3-padding-top-48">
+      <i>
+        "A big umbrella<br />
+        To shelter all our projects<br />
+        Fostering wellness."
+      </i>
+    </p>
 
-    <!-- WALL IMAGE -->
+    <!-- DYNAMICALLY LOADED CONTENTS -->
     <div class="main-content-margin-bottom w3-container w3-row-padding w3-center">
-      <div class="w3-half">
+      <div class="">
         <!-- MISSION CONTAINER -->
         <div id="mission-content" class="w3-container w3-row-padding"></div>
         <!-- ABOUT CONTAINER --> 
         <div id="about-content" class="w3-container w3-row-padding"></div>
       </div>
-      <div class="w3-half">
+      <!-- <div class="w3-half">
         <img
           src="images/bk/bk_wall30.jpg"
           class="main-content-padding-top w3-left w3-image w3-border w3-border-blue w3-bottombar w3-topbar w3-leftbar w3-rightbar w3-margin-bottom w3-padding-bottom"
           id=""/>
-      </div>
+      </div> -->
     </div>
 
+    <!-- Projects Menu -->
+    <div id="projnav" class="w3-row-padding w3-center">
+    <div id="" class="w3-card-2 w3-third w3-container">
+        <a href="dfl.html" id="dflLink">
+            <img src="images/dfl/OfficialDFLLogo200px.jpg" class="w3-image"/>
+            <p class="w3-container w3-center">Drum for Life</p> 
+        </a>
+    </div>
+    <div id="" class="w3-card-2 w3-third w3-container">
+      <a href="p3.html" id="p3Link">
+          <img src="images/p3/OfficialPPPLogo200px.png" class="w3-image"/>
+          <p class="w3-container w3-center">Pigeon Pea Project</p> 
+      </a>
+    </div>
+    <div id="" class="w3-card-2 w3-third w3-container">
+      <a href="lcb.html" id="lcbLink">
+        <img src="images/cb/OfficialLCBLogo200px.jpg" class="w3-image"/>
+        <p class="w3-container w3-center">Legacy Cookbook</p> 
+      </a>
+    </div>
+    </div>
 
 
     <!-- Footer -->
